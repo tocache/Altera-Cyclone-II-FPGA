@@ -9,3 +9,11 @@ Link de descarga del Altera Quartus II 13 sp1: http://fpgasoftware.intel.com/13.
 Conversor 5V a 3.3V bidireccional de 8 canales usando IC TI TXS0108E<br><br>
 <img src="conversor-de-nivel-bidirecional-8ch-txs0108e.jpg"><br>
 Case para la tarjeta: https://github.com/tocache/3D-Printing/tree/master/My%20STL%20files/Cyclone%20EP2CT5%20board%20case<br>
+<img src="quartus 13 installation procedures 01.PNG"><br>
+<img src="quartus 13 installation procedures 02.PNG"><br>
+<img src="quartus 13 installation procedures 03.PNG"><br>
+<img src="quartus 13 installation procedures 04.PNG"><br>
+<img src="quartus 13 installation procedures 05.PNG"><br>
+<img src="quartus 13 installation procedures 06.PNG"><br>
+<img src="quartus 13 installation procedures 07.PNG"><br>
+<img src="quartus 13 installation procedures 08.PNG"><br>
