@@ -14,7 +14,7 @@ Case para la tarjeta:https://github.com/tocache/3D-Printing/tree/master/My%20STL
 - Verificar que estén seleccionados los paquetes para los dispositivos Cyclone II:<br>
 <img src="quartus 13 installation procedures 01.PNG"><br>
 <img src="quartus 13 installation procedures 02.PNG"><br>
--Una vez instalado conectar el USB para proceder a la instalación manual de sus drivers:<br>
+- Una vez instalado conectar el USB para proceder a la instalación manual de sus drivers:<br>
 <img src="quartus 13 installation procedures 03.PNG"><br>
 <img src="quartus 13 installation procedures 04.PNG"><br>
 <img src="quartus 13 installation procedures 05.PNG"><br>
