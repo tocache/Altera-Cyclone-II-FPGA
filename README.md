@@ -12,6 +12,7 @@ Conversor 5V a 3.3V bidireccional de 8 canales usando IC TI TXS0108E<br><br>
 Case para la tarjeta:https://github.com/tocache/3D-Printing/blob/master/My%20STL%20files/Cyclone%20EP2CT5%20board%20case/<br>
 
 **Pasos para instalar el Quartus II v.13 sp1:**<br>
+- Video paso a paso para la instalación (en inglés) https://www.youtube.com/watch?v=VOVD3epBY-s <br>
 - Verificar que estén seleccionados los paquetes para los dispositivos Cyclone II:<br>
 <img src="quartus 13 installation procedures 01.PNG"><br>
 <img src="quartus 13 installation procedures 02.PNG"><br>
