@@ -1,0 +1,7 @@
+|CKTO_4
+OD <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+IA => inst.IN0
+IB => inst.IN1
+IC => inst3.IN0
+
+

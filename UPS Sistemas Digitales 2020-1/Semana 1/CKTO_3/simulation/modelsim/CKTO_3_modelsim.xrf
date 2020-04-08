@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, D:/quartusmon/CKTO_3/CKTO_3.bdf
+source_file = 1, C:/altera/13.0sp1/output_files/output_files/output_files/Waveform.vwf
+source_file = 1, D:/quartusmon/CKTO_3/db/CKTO_3.cbx.xml
+design_name = CKTO_3
+instance = comp, \INB~I , INB, CKTO_3, 1
+instance = comp, \INA~I , INA, CKTO_3, 1
+instance = comp, \INC~I , INC, CKTO_3, 1
+instance = comp, \OUTD~I , OUTD, CKTO_3, 1

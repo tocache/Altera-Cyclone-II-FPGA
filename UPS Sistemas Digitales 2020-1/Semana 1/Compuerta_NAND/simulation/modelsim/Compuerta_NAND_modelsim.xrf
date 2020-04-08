@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, D:/quartusmon/Compuerta_NAND/Compuerta_NAND.bdf
+source_file = 1, C:/altera/13.0sp1/output_files/output_files/Waveform.vwf
+source_file = 1, D:/quartusmon/Compuerta_NAND/db/Compuerta_NAND.cbx.xml
+design_name = Compuerta_NAND
+instance = comp, \INA~I , INA, Compuerta_NAND, 1
+instance = comp, \INB~I , INB, Compuerta_NAND, 1
+instance = comp, \OUTC~I , OUTC, Compuerta_NAND, 1

@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+entity lb1 is
+	port(		inclk	:	std_logic;
+				outclk	:	std_logic);
+end lb1;
+
+architecture principal of lb1 is
+component clk_div
+	port(		inclk	:	std_logic;
+				outclk	:	std_logic);
+end component;
+
+begin
+	u1: clk_div PORT MAP (inclk, outclk);
+
+end principal;

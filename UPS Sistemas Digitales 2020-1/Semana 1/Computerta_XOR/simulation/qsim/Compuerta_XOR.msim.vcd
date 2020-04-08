@@ -1,0 +1,126 @@
+$comment
+	File created using the following command:
+		vcd file Compuerta_XOR.msim.vcd -direction
+$end
+$date
+	Fri Mar 27 08:35:33 2020
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Compuerta_XOR_vlg_vec_tst $end
+$var reg 1 ! INA $end
+$var reg 1 " INB $end
+$var wire 1 # OUTC $end
+$var wire 1 $ sampler $end
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var tri1 1 ( devclrn $end
+$var tri1 1 ) devpor $end
+$var tri1 1 * devoe $end
+$var wire 1 + INA~combout $end
+$var wire 1 , INB~combout $end
+$var wire 1 - inst~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+x$
+0%
+1&
+x'
+1(
+1)
+1*
+0+
+0,
+0-
+$end
+#60000
+1!
+1+
+0$
+1-
+1#
+#130000
+0!
+0+
+1$
+0-
+0#
+#160000
+1"
+1,
+0$
+1-
+1#
+#210000
+0"
+0,
+1$
+0-
+0#
+#260000
+1!
+1"
+1+
+1,
+0$
+#330000
+0!
+0"
+0+
+0,
+1$
+#370000
+1"
+1,
+0$
+1-
+1#
+#380000
+1!
+0"
+1+
+0,
+1$
+#400000
+0!
+0+
+0$
+0-
+0#
+#450000
+1!
+1+
+1$
+1-
+1#
+#460000
+1"
+1,
+0$
+0-
+0#
+#480000
+0!
+0+
+1$
+1-
+1#
+#500000
+0"
+0,
+0$
+0-
+0#
+#1000000

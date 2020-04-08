@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\quartusmon\Compuerta_NAND\simulation\qsim
+vCompuerta_NAND
+Z1 IbRaMHSn2nhmjF35kkKME23
+Z2 VzDi;2EKe81YD7Tg1:clSK3
+Z3 dD:\quartusmon\Compuerta_NAND\simulation\qsim
+Z4 w1585323306
+Z5 8Compuerta_NAND.vo
+Z6 FCompuerta_NAND.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@compuerta_@n@a@n@d
+!i10b 1
+Z10 !s100 XCgU1NXSBO5lWF5W^R<3D2
+!s85 0
+Z11 !s108 1585323310.493000
+Z12 !s107 Compuerta_NAND.vo|
+Z13 !s90 -work|work|Compuerta_NAND.vo|
+!s101 -O0
+vCompuerta_NAND_vlg_check_tst
+!i10b 1
+!s100 `8T3V?^=o:Bo3P3;TAOZW1
+Il7KG]M<LGBnOY@[kBBjFo2
+V@o9d=AZJjY78]N2`FiaPL0
+R3
+Z14 w1585323305
+Z15 8Compuerta_NAND.vt
+Z16 FCompuerta_NAND.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z17 !s108 1585323311.214000
+Z18 !s107 Compuerta_NAND.vt|
+Z19 !s90 -work|work|Compuerta_NAND.vt|
+!s101 -O0
+R8
+n@compuerta_@n@a@n@d_vlg_check_tst
+vCompuerta_NAND_vlg_sample_tst
+!i10b 1
+!s100 TzNf64==RMh>Zb2HJmRNU3
+I18ZhOKm15Cmz8E5lAI4Bn0
+V:ggE`:H7XcZeELBlkZk2<1
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@compuerta_@n@a@n@d_vlg_sample_tst
+vCompuerta_NAND_vlg_vec_tst
+!i10b 1
+!s100 K2GG;GJ4<eTd6RgRgH?m=1
+IV4o@PlgGQ;ANX;07bkkCD1
+V5nk3HYbbEKPQY@g_Wd:Sg2
+R3
+R14
+R15
+R16
+L0 154
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@compuerta_@n@a@n@d_vlg_vec_tst

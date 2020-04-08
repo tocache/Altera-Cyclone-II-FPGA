@@ -1,0 +1,6 @@
+|Compuerta_NAND
+OUTC <= inst.DB_MAX_OUTPUT_PORT_TYPE
+INB => inst.IN0
+INA => inst.IN1
+
+

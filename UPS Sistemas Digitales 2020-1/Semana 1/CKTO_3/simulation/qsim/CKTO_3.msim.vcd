@@ -1,0 +1,162 @@
+$comment
+	File created using the following command:
+		vcd file CKTO_3.msim.vcd -direction
+$end
+$date
+	Fri Mar 27 12:23:57 2020
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module CKTO_3_vlg_vec_tst $end
+$var reg 1 ! INA $end
+$var reg 1 " INB $end
+$var reg 1 # INC $end
+$var wire 1 $ OUTD $end
+$var wire 1 % sampler $end
+$scope module i1 $end
+$var wire 1 & gnd $end
+$var wire 1 ' vcc $end
+$var wire 1 ( unknown $end
+$var tri1 1 ) devclrn $end
+$var tri1 1 * devpor $end
+$var tri1 1 + devoe $end
+$var wire 1 , INB~combout $end
+$var wire 1 - INA~combout $end
+$var wire 1 . INC~combout $end
+$var wire 1 / inst2~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+x%
+0&
+1'
+x(
+1)
+1*
+1+
+0,
+0-
+0.
+0/
+$end
+#30000
+1"
+1,
+0%
+#40000
+1#
+1.
+1%
+1/
+1$
+#60000
+1!
+0#
+1-
+0.
+0%
+#80000
+1#
+1.
+1%
+#100000
+0"
+0#
+0,
+0.
+0%
+0/
+0$
+#120000
+1#
+1.
+1%
+1/
+1$
+#130000
+1"
+1,
+0%
+#140000
+0#
+0.
+1%
+#160000
+1#
+1.
+0%
+#170000
+0!
+0"
+0-
+0,
+1%
+#180000
+0#
+0.
+0%
+0/
+0$
+#190000
+1!
+1-
+1%
+#200000
+1#
+1.
+0%
+1/
+1$
+#220000
+0#
+0.
+1%
+0/
+0$
+#240000
+1"
+1,
+0%
+1/
+1$
+#250000
+0"
+0,
+1%
+0/
+0$
+#260000
+1#
+1.
+0%
+1/
+1$
+#270000
+1"
+1,
+1%
+#290000
+0"
+0,
+0%
+#310000
+0#
+0.
+1%
+0/
+0$
+#320000
+0!
+0-
+0%
+#1000000

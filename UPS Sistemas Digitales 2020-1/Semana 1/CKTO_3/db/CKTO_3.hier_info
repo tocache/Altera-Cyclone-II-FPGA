@@ -1,0 +1,7 @@
+|CKTO_3
+OUTD <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+INC => inst2.IN0
+INA => inst.IN0
+INB => inst.IN1
+
+

@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, D:/quartusmon/Computerta_XOR/Compuerta_XOR.bdf
+source_file = 1, C:/altera/13.0sp1/output_files/Waveform.vwf
+source_file = 1, D:/quartusmon/Computerta_XOR/db/Compuerta_XOR.cbx.xml
+design_name = Compuerta_XOR
+instance = comp, \INA~I , INA, Compuerta_XOR, 1
+instance = comp, \INB~I , INB, Compuerta_XOR, 1
+instance = comp, \OUTC~I , OUTC, Compuerta_XOR, 1

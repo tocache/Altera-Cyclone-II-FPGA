@@ -1,0 +1,6 @@
+|compuerta_xor2
+EA => SC.IN0
+EB => SC.IN1
+SC <= SC.DB_MAX_OUTPUT_PORT_TYPE
+
+

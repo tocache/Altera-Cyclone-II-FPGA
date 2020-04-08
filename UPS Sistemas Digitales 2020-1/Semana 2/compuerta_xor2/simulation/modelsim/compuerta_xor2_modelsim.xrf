@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, D:/quartusmon/compuerta_xor2/compuerta_xor2.vhd
+source_file = 1, D:/quartusmon/compuerta_xor2/Waveform.vwf
+source_file = 1, D:/quartusmon/compuerta_xor2/db/compuerta_xor2.cbx.xml
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = compuerta_xor2
+instance = comp, \EB~I , EB, compuerta_xor2, 1
+instance = comp, \EA~I , EA, compuerta_xor2, 1
+instance = comp, \SC~0 , SC~0, compuerta_xor2, 1
+instance = comp, \SC~I , SC, compuerta_xor2, 1

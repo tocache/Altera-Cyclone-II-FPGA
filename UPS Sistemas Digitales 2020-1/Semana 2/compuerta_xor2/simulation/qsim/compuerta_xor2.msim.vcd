@@ -1,0 +1,72 @@
+$comment
+	File created using the following command:
+		vcd file compuerta_xor2.msim.vcd -direction
+$end
+$date
+	Fri Apr 03 07:53:22 2020
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module compuerta_xor2_vlg_vec_tst $end
+$var reg 1 ! EA $end
+$var reg 1 " EB $end
+$var wire 1 # SC $end
+$var wire 1 $ sampler $end
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var tri1 1 ( devclrn $end
+$var tri1 1 ) devpor $end
+$var tri1 1 * devoe $end
+$var wire 1 + EB~combout $end
+$var wire 1 , EA~combout $end
+$var wire 1 - SC~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+x$
+0%
+1&
+x'
+1(
+1)
+1*
+0+
+0,
+0-
+$end
+#60000
+1!
+1,
+0$
+1-
+1#
+#110000
+1"
+1+
+1$
+0-
+0#
+#170000
+0!
+0,
+0$
+1-
+1#
+#240000
+0"
+0+
+1$
+0-
+0#
+#1000000
