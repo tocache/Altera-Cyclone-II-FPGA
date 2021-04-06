@@ -10,14 +10,15 @@ Link de descarga del Altera Quartus II 13 sp1: http://fpgasoftware.intel.com/13.
 <b>NOTA:</b> Tener en cuenta en seleccionar la familia de dispositivos Altera Cyclone II antes de descargar el paquete de instalación<br>
 Conversor 5V a 3.3V bidireccional de 8 canales usando IC TI TXS0108E<br><br>
 <img src="conversor-de-nivel-bidirecional-8ch-txs0108e.jpg"><br>
-Case para la tarjeta:https://github.com/tocache/3D-Printing/blob/master/My%20STL%20files/Cyclone%20EP2CT5%20board%20case/<br>
+Case para la tarjeta:https://github.com/tocache/3D-Printing/blob/master/My%20STL%20files/Cyclone%20EP2CT5%20board%20case/<br><br>
 
-**Pasos para instalar el Quartus II v.13 sp1:**<br>
+#**Pasos para instalar el Quartus II v.13 sp1:**<br>
 - Video paso a paso para la instalación (en inglés) https://www.youtube.com/watch?v=VOVD3epBY-s <br>
 - Verificar que estén seleccionados los paquetes para los dispositivos Cyclone II:<br>
 <img src="quartus 13 installation procedures 01.PNG"><br>
-<img src="quartus 13 installation procedures 02.PNG"><br><br>
-**Pasos para instalar el USB Blaster**<br>
+<img src="quartus 13 installation procedures 02.PNG"><br><br><br>
+
+#**Pasos para instalar el USB Blaster**<br>
 - Una vez instalado el Altera Quartus II conectar el USB para proceder a la instalación manual del USB Blaster (sus drivers):<br>
 <img src="quartus 13 installation procedures 03.PNG"><br>
 <img src="quartus 13 installation procedures 04.PNG"><br>
