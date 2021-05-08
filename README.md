@@ -1,4 +1,4 @@
-# VHDL-QuartusII
+# Altera-Cyclone-II-FPGA
 <br>
 Repositorio de proyectos hechos en el Quartus II para el FPGA Cyclone II<br><br>
 <img src="https://github.com/tocache/Altera-Cyclone-II-FPGA/blob/75c83a53fa12133dddf69c7ac84b6360d7030bf7/IF_F31D8167.jpg"><br>
