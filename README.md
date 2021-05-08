@@ -1,10 +1,9 @@
 # VHDL-QuartusII
 <br>
 Repositorio de proyectos hechos en el Quartus II para el FPGA Cyclone II<br><br>
-
+<img src="IF_F31D8167.jpg"><br>
 Enlace de referencia de información para la tarjeta EP2C5T: http://qqtrading.com.my/altera-cyclone-2-fpga-development-board-ep2c5t144<br>
 Wiki para la tarjeta EP2C5: http://land-boards.com/blwiki/index.php?title=Cyclone_II_EP2C5_Mini_Dev_Board<br>
-<img src="IF_F31D8167.jpg"><br>
 Wiki en español del procesador NIOS II: http://www.coffeebrain.org/wiki/index.php?title=Altera_SoftCore_NIOS_II<br>
 Link de descarga del Altera Quartus II 13 sp1: http://fpgasoftware.intel.com/13.0sp1/<br>
 <img src="device support list for altera cyclone.PNG"><br>
