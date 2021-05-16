@@ -1,0 +1,112 @@
+$comment
+	File created using the following command:
+		vcd file ejemplo20211_1.msim.vcd -direction
+$end
+$date
+	Fri Mar 26 08:21:09 2021
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module ejemplo20211_1_vlg_vec_tst $end
+$var reg 1 ! IN_A $end
+$var reg 1 " IN_B $end
+$var wire 1 # OUT_C $end
+$var wire 1 $ sampler $end
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var tri1 1 ( devclrn $end
+$var tri1 1 ) devpor $end
+$var tri1 1 * devoe $end
+$var wire 1 + IN_B~combout $end
+$var wire 1 , IN_A~combout $end
+$var wire 1 - inst~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+x$
+0%
+1&
+x'
+1(
+1)
+1*
+0+
+0,
+0-
+$end
+#90000
+1!
+1,
+0$
+#150000
+1"
+1+
+1$
+1-
+1#
+#200000
+0!
+0,
+0$
+0-
+0#
+#270000
+0"
+0+
+1$
+#330000
+1!
+1"
+1,
+1+
+0$
+1-
+1#
+#360000
+0!
+0"
+0,
+0+
+1$
+0-
+0#
+#420000
+1"
+1+
+0$
+#450000
+0"
+0+
+1$
+#500000
+1!
+1,
+0$
+#530000
+1"
+1+
+1$
+1-
+1#
+#560000
+0"
+0+
+0$
+0-
+0#
+#590000
+0!
+0,
+1$
+#1000000

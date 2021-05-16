@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, D:/quartusmon/20211_el42_or1/20211_el42_or1.bdf
+source_file = 1, D:/quartusmon/20211_el42_or1/Waveform.vwf
+source_file = 1, D:/quartusmon/20211_el42_or1/db/20211_el42_or1.cbx.xml
+design_name = \20211_el42_or1 
+instance = comp, \IN_B~I , IN_B, \20211_el42_or1 , 1
+instance = comp, \IN_A~I , IN_A, \20211_el42_or1 , 1
+instance = comp, \OUT_C~I , OUT_C, \20211_el42_or1 , 1

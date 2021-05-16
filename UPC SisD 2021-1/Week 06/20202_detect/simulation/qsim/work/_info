@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\quartusmon\20202_detect\simulation\qsim
+vdetect
+Z1 !s100 FP@cfd3R_VjUmTBhOHV]?3
+Z2 IAgAjI9CE7QX@iLZ0EYKR_3
+Z3 V>^7C8o5NXN17dCOZYdYBK0
+Z4 dD:\quartusmon\20202_detect\simulation\qsim
+Z5 w1600646855
+Z6 8detect.vo
+Z7 Fdetect.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|detect.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1600646858.126000
+Z12 !s107 detect.vo|
+!s101 -O0
+vdetect_vlg_check_tst
+!i10b 1
+Z13 !s100 @jIXanN`OKdMzioTW8d160
+Z14 I:M>PNF_8jHEY1jV2J8Q5Y2
+Z15 VoimEhT>j0NfedaJbhaHl80
+R4
+Z16 w1600646853
+Z17 8detect.vt
+Z18 Fdetect.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1600646858.518000
+Z20 !s107 detect.vt|
+Z21 !s90 -work|work|detect.vt|
+!s101 -O0
+R10
+vdetect_vlg_sample_tst
+!i10b 1
+Z22 !s100 9`CHe7KCii_70nZDPXe6i3
+Z23 I0YfCG[k_4MMoj2S@VIIO71
+Z24 VMb[V0]PGGhgCRAV;1dIH[1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vdetect_vlg_vec_tst
+!i10b 1
+Z25 !s100 GN]M5W`K`1[3C`bCl77<N3
+Z26 I`lKFO>YakmkHXYZ^1g]RA3
+Z27 VSYYhC[=:mC?g>b3XG@hAf3
+R4
+R16
+R17
+R18
+Z28 L0 156
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

@@ -1,0 +1,12 @@
+|el_ultimo
+clk => es_p~13.DATAIN
+D => es_p~1.DATAA
+D => es_p~3.DATAB
+D => es_p~4.DATAB
+D => Q~0.DATAB
+D => Selector0.IN1
+D => es_p~2.DATAB
+D => Selector1.IN1
+Q <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

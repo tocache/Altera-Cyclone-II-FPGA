@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\quartusmon\20202_sem6d\simulation\qsim
+vel_ultimo
+Z1 !s100 9ZjSg?`OGoJj]TLcCOoC21
+Z2 I6k`>=kF[E4G6GXkT^nc1m3
+Z3 VF`OjI5Rl3Tl8lXD^U77Hd1
+Z4 dD:\quartusmon\20202_sem6d\simulation\qsim
+Z5 w1619818653
+Z6 8el_ultimo.vo
+Z7 Fel_ultimo.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|el_ultimo.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1619818657.692000
+Z12 !s107 el_ultimo.vo|
+!s101 -O0
+vel_ultimo_vlg_check_tst
+!i10b 1
+Z13 !s100 9QXSJ0DlTiENYc;6?E:JB1
+Z14 IB?GM>GTS202m_]KW9W_[_2
+Z15 VK^dW3H[N=iG^z?[h0OVKW0
+R4
+Z16 w1619818649
+Z17 8el_ultimo.vt
+Z18 Fel_ultimo.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1619818658.444000
+Z20 !s107 el_ultimo.vt|
+Z21 !s90 -work|work|el_ultimo.vt|
+!s101 -O0
+R10
+vel_ultimo_vlg_sample_tst
+!i10b 1
+Z22 !s100 `lHZYez88NUDH[KAlILn93
+Z23 IMCOcVo>GZh^n0zH`I2T=R0
+Z24 V9eW0Qm;oZb<AEfzHWK@:a0
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vel_ultimo_vlg_vec_tst
+!i10b 1
+Z25 !s100 ^G8`4b15J>ALgLo33^Sig3
+Z26 IAGkDA=NXCQOQ44MdE_H^o3
+Z27 ViR4Q[C_NC1laGj7WiQA`_1
+R4
+R16
+R17
+R18
+Z28 L0 154
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

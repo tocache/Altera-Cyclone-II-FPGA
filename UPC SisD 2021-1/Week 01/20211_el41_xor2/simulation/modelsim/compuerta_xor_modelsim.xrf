@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, D:/quartusmon/20211_el41_xor2/compuerta_xor.bdf
+source_file = 1, D:/quartusmon/20211_el41_xor2/Waveform.vwf
+source_file = 1, D:/quartusmon/20211_el41_xor2/db/compuerta_xor.cbx.xml
+design_name = compuerta_xor
+instance = comp, \IN_B~I , IN_B, compuerta_xor, 1
+instance = comp, \IN_A~I , IN_A, compuerta_xor, 1
+instance = comp, \IN_C~I , IN_C, compuerta_xor, 1
+instance = comp, \OUT_C~I , OUT_C, compuerta_xor, 1
+instance = comp, \OUT_D~I , OUT_D, compuerta_xor, 1

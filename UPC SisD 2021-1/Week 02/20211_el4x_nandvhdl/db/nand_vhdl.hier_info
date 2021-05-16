@@ -1,0 +1,6 @@
+|nand_vhdl
+IN_A => Mux0.IN4
+IN_B => Mux0.IN5
+OUT_C <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

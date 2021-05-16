@@ -1,0 +1,9 @@
+
+State Machine - |el_ultimo|es_p
+Name es_p.J5 es_p.J4 es_p.J3 es_p.J2 es_p.J1 es_p.J0 
+es_p.J0 0 0 0 0 0 0 
+es_p.J1 0 0 0 0 1 1 
+es_p.J2 0 0 0 1 0 1 
+es_p.J3 0 0 1 0 0 1 
+es_p.J4 0 1 0 0 0 1 
+es_p.J5 1 0 0 0 0 1 

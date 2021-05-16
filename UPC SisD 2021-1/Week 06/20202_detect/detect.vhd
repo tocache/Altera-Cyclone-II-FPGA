@@ -1,0 +1,80 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+entity detect is
+port ( clk, D, rst: in std_logic;
+           Q: out std_logic);
+end detect;
+
+architecture flujo of detect is
+
+TYPE estados is (T0, T1, T2, T3, T4, T5, T6, T7);
+SIGNAL es_p: estados;
+
+begin
+	process (clk, rst)
+	begin
+		if rst = '1' then
+			es_p <= T0;
+		else	
+			if rising_edge(clk) then
+				case es_p is
+					when T0 =>
+						if D = '0' then
+							es_p <= T0;
+						else
+							es_p <= T1;
+						end if;
+					when T1 =>
+						if D = '0' then
+							es_p <= T2;
+						else
+							es_p <= T1;
+						end if;
+					when T2 =>
+						if D = '0' then
+							es_p <= T0;
+						else
+							es_p <= T3;
+						end if;
+					when T3 =>
+						if D = '0' then
+							es_p <= T2;
+						else
+							es_p <= T4;
+						end if;
+					when T4 =>
+						if D = '0' then
+							es_p <= T5;
+						else
+							es_p <= T1;
+						end if;
+					when T5 =>
+						if D = '0' then
+							es_p <= T0;
+						else
+							es_p <= T6;
+						end if;						
+					when T6 =>
+						if D = '0' then
+							es_p <= T7;
+						else
+							es_p <= T4;
+						end if;
+					when T7 =>
+						if D = '0' then
+							es_p <= T0;
+						else
+							es_p <= T3;
+						end if;
+					when others =>
+						es_p <= T0;
+				end case;
+			end if;
+		end if;
+	end process;
+	with es_p select
+		Q <= '1' when T7, '0' when others;
+end flujo;

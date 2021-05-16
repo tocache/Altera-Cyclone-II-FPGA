@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, D:/quartusmon/20211_el4x_xorvhdl/xor_vhdl.vhd
+source_file = 1, D:/quartusmon/20211_el4x_xorvhdl/Waveform1.vwf
+source_file = 1, D:/quartusmon/20211_el4x_xorvhdl/db/xor_vhdl.cbx.xml
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = xor_vhdl
+instance = comp, \IN_B~I , IN_B, xor_vhdl, 1
+instance = comp, \IN_A~I , IN_A, xor_vhdl, 1
+instance = comp, \OUT_C~0 , OUT_C~0, xor_vhdl, 1
+instance = comp, \OUT_C~I , OUT_C, xor_vhdl, 1

@@ -1,0 +1,14 @@
+|detect
+clk => es_p~13.DATAIN
+D => es_p~0.DATAB
+D => es_p~2.DATAB
+D => es_p~4.DATAB
+D => es_p~6.DATAB
+D => es_p~7.DATAB
+D => Selector0.IN1
+D => Selector1.IN1
+D => es_p~5.DATAB
+rst => es_p~17.DATAIN
+Q <= Q~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

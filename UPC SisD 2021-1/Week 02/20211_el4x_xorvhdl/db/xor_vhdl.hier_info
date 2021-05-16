@@ -1,0 +1,10 @@
+|xor_vhdl
+IN_A => Equal0.IN2
+IN_A => Equal1.IN2
+IN_A => Equal2.IN2
+IN_B => Equal0.IN3
+IN_B => Equal1.IN3
+IN_B => Equal2.IN3
+OUT_C <= OUT_C.DB_MAX_OUTPUT_PORT_TYPE
+
+

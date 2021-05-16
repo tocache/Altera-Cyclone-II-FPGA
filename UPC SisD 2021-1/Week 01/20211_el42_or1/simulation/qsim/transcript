@@ -1,0 +1,11 @@
+# do 20211_el42_or1.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module \20211_el42_or1 
+# 
+# Top level modules:
+# 	\20211_el42_or1 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: 20211_el42_or1.vt(29): near "20211e": Digits must follow 'E' character in real.
+# ** Error: 20211_el42_or1.vt(29): near "20211e": syntax error, unexpected FLOATING NUMBER, expecting IDENTIFIER or automatic or TYPE_IDENTIFIER or static
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# Executing ONERROR command at macro ./20211_el42_or1.do line 4

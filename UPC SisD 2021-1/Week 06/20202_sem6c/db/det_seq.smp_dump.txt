@@ -1,0 +1,9 @@
+
+State Machine - |det_seq|es_p
+Name es_p.E5 es_p.E4 es_p.E3 es_p.E2 es_p.E1 es_p.E0 
+es_p.E0 0 0 0 0 0 0 
+es_p.E1 0 0 0 0 1 1 
+es_p.E2 0 0 0 1 0 1 
+es_p.E3 0 0 1 0 0 1 
+es_p.E4 0 1 0 0 0 1 
+es_p.E5 1 0 0 0 0 1 

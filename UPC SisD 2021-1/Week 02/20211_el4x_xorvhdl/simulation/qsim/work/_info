@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\quartusmon\20211_el4x_xorvhdl\simulation\qsim
+vxor_vhdl
+Z1 !s100 ]9eVU;;RHVQGCSi081MiX3
+Z2 I9Hz>HRT7A;oM54cL=TIBa2
+Z3 V@Xgo:PSjVXU9iIEVmV9bb0
+Z4 dD:\quartusmon\20211_el4x_xorvhdl\simulation\qsim
+Z5 w1617579110
+Z6 8xor_vhdl.vo
+Z7 Fxor_vhdl.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|xor_vhdl.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1617579115.143000
+Z12 !s107 xor_vhdl.vo|
+!s101 -O0
+vxor_vhdl_vlg_check_tst
+!i10b 1
+Z13 !s100 D]n4[8FlzfRX4US7R5miU1
+Z14 InTk>nYGH;e_E>;eRoUfAQ1
+Z15 VGN71FzP]17?Pjz><R[C8g1
+R4
+Z16 w1617579108
+Z17 8xor_vhdl.vt
+Z18 Fxor_vhdl.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1617579115.468000
+Z20 !s107 xor_vhdl.vt|
+Z21 !s90 -work|work|xor_vhdl.vt|
+!s101 -O0
+R10
+vxor_vhdl_vlg_sample_tst
+!i10b 1
+Z22 !s100 ]28I5Z=j>zoT5`iVLmn^R3
+Z23 IjNbX7hBG=WPj[VjRj8kHJ3
+Z24 V=^SD1WBHUlnA;_`EXOSAo2
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vxor_vhdl_vlg_vec_tst
+!i10b 1
+Z25 !s100 I0I8>RLBRe1]8D[fHhSUD1
+Z26 IEZ73Q0Vj6W>TR5`6Ag9b_1
+Z27 V2ZXzh8]l<dh4GXd=IRHJK2
+R4
+R16
+R17
+R18
+Z28 L0 154
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

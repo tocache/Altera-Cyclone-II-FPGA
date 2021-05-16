@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'cristal50M'
+Slack : -4.732
+TNS   : -94.093
+
+Type  : Slow Model Setup 'divisor:u3|pre_salida'
+Slack : -0.496
+TNS   : -1.074
+
+Type  : Slow Model Hold 'cristal50M'
+Slack : -2.568
+TNS   : -2.568
+
+Type  : Slow Model Hold 'divisor:u3|pre_salida'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'cristal50M'
+Slack : -1.941
+TNS   : -43.493
+
+Type  : Slow Model Minimum Pulse Width 'divisor:u3|pre_salida'
+Slack : -0.742
+TNS   : -5.936
+
+Type  : Fast Model Setup 'cristal50M'
+Slack : -1.028
+TNS   : -13.984
+
+Type  : Fast Model Setup 'divisor:u3|pre_salida'
+Slack : 0.507
+TNS   : 0.000
+
+Type  : Fast Model Hold 'cristal50M'
+Slack : -1.371
+TNS   : -1.371
+
+Type  : Fast Model Hold 'divisor:u3|pre_salida'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'cristal50M'
+Slack : -1.380
+TNS   : -29.380
+
+Type  : Fast Model Minimum Pulse Width 'divisor:u3|pre_salida'
+Slack : -0.500
+TNS   : -4.000
+
+------------------------------------------------------------

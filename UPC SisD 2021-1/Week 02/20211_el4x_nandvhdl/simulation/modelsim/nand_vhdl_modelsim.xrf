@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, D:/quartusmon/20211_el4x_nandvhdl/nand_vhdl.vhd
+source_file = 1, D:/quartusmon/20211_el4x_nandvhdl/Waveform.vwf
+source_file = 1, D:/quartusmon/20211_el4x_nandvhdl/db/nand_vhdl.cbx.xml
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = nand_vhdl
+instance = comp, \IN_A~I , IN_A, nand_vhdl, 1
+instance = comp, \IN_B~I , IN_B, nand_vhdl, 1
+instance = comp, \Mux0~0 , Mux0~0, nand_vhdl, 1
+instance = comp, \OUT_C~I , OUT_C, nand_vhdl, 1

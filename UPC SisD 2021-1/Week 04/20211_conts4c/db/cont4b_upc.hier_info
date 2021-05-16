@@ -1,0 +1,96 @@
+|cont4b_upc
+reloj_50M => divisor:u1.entrada
+n_rst => cont4b:u2.n_rst
+Sa <= decbin7scc:u3.Sa
+Sb <= decbin7scc:u3.Sb
+Sc <= decbin7scc:u3.Sc
+Sd <= decbin7scc:u3.Sd
+Se <= decbin7scc:u3.Se
+Sf <= decbin7scc:u3.Sf
+Sg <= decbin7scc:u3.Sg
+
+
+|cont4b_upc|divisor:u1
+entrada => pre_salida.CLK
+entrada => cuenta[0].CLK
+entrada => cuenta[1].CLK
+entrada => cuenta[2].CLK
+entrada => cuenta[3].CLK
+entrada => cuenta[4].CLK
+entrada => cuenta[5].CLK
+entrada => cuenta[6].CLK
+entrada => cuenta[7].CLK
+entrada => cuenta[8].CLK
+entrada => cuenta[9].CLK
+entrada => cuenta[10].CLK
+entrada => cuenta[11].CLK
+entrada => cuenta[12].CLK
+entrada => cuenta[13].CLK
+entrada => cuenta[14].CLK
+entrada => cuenta[15].CLK
+entrada => cuenta[16].CLK
+entrada => cuenta[17].CLK
+entrada => cuenta[18].CLK
+entrada => cuenta[19].CLK
+entrada => cuenta[20].CLK
+entrada => cuenta[21].CLK
+entrada => cuenta[22].CLK
+entrada => cuenta[23].CLK
+entrada => cuenta[24].CLK
+entrada => cuenta[25].CLK
+salida <= pre_salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cont4b_upc|cont4b:u2
+in_clk => cuenta[0].CLK
+in_clk => cuenta[1].CLK
+in_clk => cuenta[2].CLK
+in_clk => cuenta[3].CLK
+n_rst => cuenta[0].ACLR
+n_rst => cuenta[1].ACLR
+n_rst => cuenta[2].ACLR
+n_rst => cuenta[3].ACLR
+q[0] <= cuenta[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cuenta[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cuenta[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cuenta[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cont4b_upc|decbin7scc:u3
+E[0] => Mux0.IN19
+E[0] => Mux1.IN19
+E[0] => Mux2.IN19
+E[0] => Mux3.IN19
+E[0] => Mux4.IN19
+E[0] => Mux5.IN19
+E[0] => Mux6.IN19
+E[1] => Mux0.IN18
+E[1] => Mux1.IN18
+E[1] => Mux2.IN18
+E[1] => Mux3.IN18
+E[1] => Mux4.IN18
+E[1] => Mux5.IN18
+E[1] => Mux6.IN18
+E[2] => Mux0.IN17
+E[2] => Mux1.IN17
+E[2] => Mux2.IN17
+E[2] => Mux3.IN17
+E[2] => Mux4.IN17
+E[2] => Mux5.IN17
+E[2] => Mux6.IN17
+E[3] => Mux0.IN16
+E[3] => Mux1.IN16
+E[3] => Mux2.IN16
+E[3] => Mux3.IN16
+E[3] => Mux4.IN16
+E[3] => Mux5.IN16
+E[3] => Mux6.IN16
+Sa <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+Sb <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+Sc <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+Sd <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+Se <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+Sf <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+Sg <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

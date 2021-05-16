@@ -1,0 +1,9 @@
+
+State Machine - |d_mealy|es_p
+Name es_p.T6 es_p.T5 es_p.T4 es_p.T3 es_p.T2 es_p.T1 
+es_p.T1 0 0 0 0 0 0 
+es_p.T2 0 0 0 0 1 1 
+es_p.T3 0 0 0 1 0 1 
+es_p.T4 0 0 1 0 0 1 
+es_p.T5 0 1 0 0 0 1 
+es_p.T6 1 0 0 0 0 1 

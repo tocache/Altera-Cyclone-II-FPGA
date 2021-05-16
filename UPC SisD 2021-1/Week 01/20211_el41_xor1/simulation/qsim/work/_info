@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\quartusmon\20211_el41_xor1\simulation\qsim
+vcompuerta_xor
+Z1 I=57X1hOidjz;^ST:n`zFE2
+Z2 V?PTFShOBmLhg=?mDZ9kiz3
+Z3 dD:\quartusmon\20211_el41_xor1\simulation\qsim
+Z4 w1616778317
+Z5 8compuerta_xor.vo
+Z6 Fcompuerta_xor.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 BonmbO07836Md]6;iHKh<0
+!s85 0
+Z10 !s108 1616778322.824000
+Z11 !s107 compuerta_xor.vo|
+Z12 !s90 -work|work|compuerta_xor.vo|
+!s101 -O0
+vcompuerta_xor_vlg_check_tst
+!i10b 1
+!s100 m^`T@iMRfYiY_@Z=HXXI:3
+I;h0966ihUm68EC__:DfE@0
+VnC3L2im[V<cga@V_k^[gB3
+R3
+Z13 w1616778314
+Z14 8compuerta_xor.vt
+Z15 Fcompuerta_xor.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z16 !s108 1616778323.474000
+Z17 !s107 compuerta_xor.vt|
+Z18 !s90 -work|work|compuerta_xor.vt|
+!s101 -O0
+R8
+vcompuerta_xor_vlg_sample_tst
+!i10b 1
+!s100 V;ggcZX^i1gYfLzeHDmGo3
+I^JZ8nVOHmLR1zDPljl7NU3
+Vml2:aG0DTYi0L5H:lUdJD0
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vcompuerta_xor_vlg_vec_tst
+!i10b 1
+!s100 B_UQK76_hc8ePPRmDg0G60
+I=a;Ne7^DKmhI230zn@f3X1
+Vk6:l<c]1EO?AJb=z9_7A50
+R3
+R13
+R14
+R15
+L0 154
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

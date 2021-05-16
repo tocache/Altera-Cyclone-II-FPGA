@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\quartusmon\ejemplo20211_1\simulation\qsim
+vejemplo20211_1
+Z1 IGkU]g4?g=HIXM3TBIkC<02
+Z2 VJ?F8E49k>3;^JfNo]jPE]0
+Z3 dD:\quartusmon\ejemplo20211_1\simulation\qsim
+Z4 w1616764855
+Z5 8ejemplo20211_1.vo
+Z6 Fejemplo20211_1.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 BkD9DiT9aLj[@TSHhdh`>3
+!s85 0
+Z10 !s108 1616764863.751000
+Z11 !s107 ejemplo20211_1.vo|
+Z12 !s90 -work|work|ejemplo20211_1.vo|
+!s101 -O0
+vejemplo20211_1_vlg_check_tst
+!i10b 1
+!s100 efRBgGWRekn[W8OURoD_:3
+IM4ElGRWT6lnaAd?;[`_VB1
+V`S8GTPYH@E9dl5a?l8J;k0
+R3
+Z13 w1616764850
+Z14 8ejemplo20211_1.vt
+Z15 Fejemplo20211_1.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z16 !s108 1616764864.568000
+Z17 !s107 ejemplo20211_1.vt|
+Z18 !s90 -work|work|ejemplo20211_1.vt|
+!s101 -O0
+R8
+vejemplo20211_1_vlg_sample_tst
+!i10b 1
+!s100 WBAXAII[4Z?dHTBBAKm0P2
+IGi:3eBITG3fccNS=m17S70
+V_AcE[X7S0j=g960KSiWla0
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vejemplo20211_1_vlg_vec_tst
+!i10b 1
+!s100 ?4;B`_V`:nTR=;]GU7<`f1
+IGcSVMbgE]1^bf36BD?QH43
+VZb3=f8d8zXTJPkUoA`m2l3
+R3
+R13
+R14
+R15
+L0 154
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

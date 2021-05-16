@@ -1,0 +1,23 @@
+--Este es un comentario
+--Codificado por Kalun Lau
+--Compuerta NAND modelada en diferentes estilos de descripcion
+
+--Primera seccion: declaracion de las librerias
+library IEEE;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+
+--Segunda seccion: declaracion de la entidad
+entity nand_vhdl is
+	port(	IN_A, IN_B:	in std_logic;
+			OUT_C:		out std_logic);
+end nand_vhdl;
+
+--Tercera seccion: declaracion de la arquitectura
+--Utilizando estilo de asignacion directa
+architecture working of nand_vhdl is
+begin
+		OUT_C <= IN_A nand IN_B;
+end working;
+		

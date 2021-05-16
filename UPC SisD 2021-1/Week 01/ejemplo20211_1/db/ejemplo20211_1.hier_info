@@ -1,0 +1,6 @@
+|ejemplo20211_1
+OUT_C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+IN_A => inst.IN0
+IN_B => inst.IN1
+
+
