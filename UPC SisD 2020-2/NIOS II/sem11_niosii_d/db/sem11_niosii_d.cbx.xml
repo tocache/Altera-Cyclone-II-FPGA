@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sem11_niosii_d">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sem11_niosii_d|nios_upc:u0|nios_upc_jtag_uart_0:jtag_uart_0|nios_upc_jtag_uart_0_scfifo_r:the_nios_upc_jtag_uart_0_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sem11_niosii_d|nios_upc:u0|nios_upc_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_e1d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sem11_niosii_d|nios_upc:u0|nios_upc_jtag_uart_0:jtag_uart_0|nios_upc_jtag_uart_0_scfifo_w:the_nios_upc_jtag_uart_0_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sem11_niosii_d|nios_upc:u0|nios_upc_nios2_qsys_0:nios2_qsys_0|nios_upc_nios2_qsys_0_nios2_oci:the_nios_upc_nios2_qsys_0_nios2_oci|nios_upc_nios2_qsys_0_nios2_ocimem:the_nios_upc_nios2_qsys_0_nios2_ocimem|nios_upc_nios2_qsys_0_ociram_sp_ram_module:nios_upc_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_kc81.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sem11_niosii_d|nios_upc:u0|nios_upc_nios2_qsys_0:nios2_qsys_0|nios_upc_nios2_qsys_0_register_bank_a_module:nios_upc_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_gvg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sem11_niosii_d|nios_upc:u0|nios_upc_nios2_qsys_0:nios2_qsys_0|nios_upc_nios2_qsys_0_register_bank_b_module:nios_upc_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_hvg1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

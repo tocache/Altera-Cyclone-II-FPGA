@@ -1,0 +1,51 @@
+|implementacion
+clk_50 => clk_div:u1.inclk
+boton => ult_det:u2.D
+led_det <= ult_det:u2.Q
+led_clk <= clk_div:u1.outclk
+buzz <= <VCC>
+
+
+|implementacion|clk_div:u1
+inclk => salidasa.CLK
+inclk => internaso[0].CLK
+inclk => internaso[1].CLK
+inclk => internaso[2].CLK
+inclk => internaso[3].CLK
+inclk => internaso[4].CLK
+inclk => internaso[5].CLK
+inclk => internaso[6].CLK
+inclk => internaso[7].CLK
+inclk => internaso[8].CLK
+inclk => internaso[9].CLK
+inclk => internaso[10].CLK
+inclk => internaso[11].CLK
+inclk => internaso[12].CLK
+inclk => internaso[13].CLK
+inclk => internaso[14].CLK
+inclk => internaso[15].CLK
+inclk => internaso[16].CLK
+inclk => internaso[17].CLK
+inclk => internaso[18].CLK
+inclk => internaso[19].CLK
+inclk => internaso[20].CLK
+inclk => internaso[21].CLK
+inclk => internaso[22].CLK
+inclk => internaso[23].CLK
+inclk => internaso[24].CLK
+inclk => internaso[25].CLK
+outclk <= salidasa.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|implementacion|ult_det:u2
+clk => es_p~3.DATAIN
+D => es_p.DATAA
+D => es_p.DATAB
+D => es_p.DATAB
+D => Q.DATAB
+D => Selector0.IN1
+D => es_p.DATAB
+D => Selector1.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+

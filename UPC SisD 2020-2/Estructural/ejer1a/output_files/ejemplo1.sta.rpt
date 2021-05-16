@@ -1,0 +1,1200 @@
+TimeQuest Timing Analyzer report for ejemplo1
+Fri Sep 11 10:31:09 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'inclk'
+ 12. Slow Model Setup: 'div_freq:u1|salidasa'
+ 13. Slow Model Hold: 'inclk'
+ 14. Slow Model Hold: 'div_freq:u1|salidasa'
+ 15. Slow Model Minimum Pulse Width: 'inclk'
+ 16. Slow Model Minimum Pulse Width: 'div_freq:u1|salidasa'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'inclk'
+ 25. Fast Model Setup: 'div_freq:u1|salidasa'
+ 26. Fast Model Hold: 'inclk'
+ 27. Fast Model Hold: 'div_freq:u1|salidasa'
+ 28. Fast Model Minimum Pulse Width: 'inclk'
+ 29. Fast Model Minimum Pulse Width: 'div_freq:u1|salidasa'
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; ejemplo1                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5T144C8                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                     ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+; Clock Name           ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                  ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+; div_freq:u1|salidasa ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { div_freq:u1|salidasa } ;
+; inclk                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { inclk }                ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                     ;
++------------+-----------------+----------------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name           ; Note                                                  ;
++------------+-----------------+----------------------+-------------------------------------------------------+
+; 200.6 MHz  ; 200.6 MHz       ; inclk                ;                                                       ;
+; 664.01 MHz ; 402.58 MHz      ; div_freq:u1|salidasa ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+----------------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------+
+; Slow Model Setup Summary                      ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; inclk                ; -3.985 ; -75.354       ;
+; div_freq:u1|salidasa ; -0.506 ; -1.037        ;
++----------------------+--------+---------------+
+
+
++-----------------------------------------------+
+; Slow Model Hold Summary                       ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; inclk                ; -2.561 ; -2.561        ;
+; div_freq:u1|salidasa ; 0.499  ; 0.000         ;
++----------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------+
+; Slow Model Minimum Pulse Width Summary        ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; inclk                ; -1.941 ; -42.009       ;
+; div_freq:u1|salidasa ; -0.742 ; -5.936        ;
++----------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'inclk'                                                                                                            ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -3.985 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 5.025      ;
+; -3.905 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.945      ;
+; -3.904 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.944      ;
+; -3.899 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.939      ;
+; -3.861 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.901      ;
+; -3.860 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.900      ;
+; -3.859 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.899      ;
+; -3.846 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.888      ;
+; -3.846 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.888      ;
+; -3.840 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.880      ;
+; -3.839 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.879      ;
+; -3.816 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.856      ;
+; -3.815 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.855      ;
+; -3.802 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.844      ;
+; -3.802 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.844      ;
+; -3.800 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.840      ;
+; -3.799 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.839      ;
+; -3.781 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.823      ;
+; -3.781 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.823      ;
+; -3.773 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.813      ;
+; -3.757 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.799      ;
+; -3.757 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.799      ;
+; -3.755 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.795      ;
+; -3.754 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.794      ;
+; -3.741 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.783      ;
+; -3.741 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.783      ;
+; -3.736 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.776      ;
+; -3.710 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.750      ;
+; -3.699 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.741      ;
+; -3.696 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.738      ;
+; -3.696 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.738      ;
+; -3.650 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.690      ;
+; -3.646 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.686      ;
+; -3.645 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.685      ;
+; -3.643 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[11] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.683      ;
+; -3.643 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.683      ;
+; -3.638 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.680      ;
+; -3.633 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[18] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.673      ;
+; -3.627 ; div_freq:u1|internaso[11] ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.667      ;
+; -3.624 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.664      ;
+; -3.613 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.655      ;
+; -3.610 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.650      ;
+; -3.587 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.629      ;
+; -3.584 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.624      ;
+; -3.575 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.615      ;
+; -3.573 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.615      ;
+; -3.571 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.611      ;
+; -3.567 ; div_freq:u1|internaso[12] ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.607      ;
+; -3.560 ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.600      ;
+; -3.559 ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.599      ;
+; -3.557 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[11] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.597      ;
+; -3.547 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[18] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.587      ;
+; -3.539 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[13] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.579      ;
+; -3.531 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.571      ;
+; -3.527 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.567      ;
+; -3.524 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.564      ;
+; -3.520 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.562      ;
+; -3.517 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[11] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.557      ;
+; -3.510 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.550      ;
+; -3.507 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[18] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.547      ;
+; -3.506 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.546      ;
+; -3.501 ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.543      ;
+; -3.501 ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.543      ;
+; -3.499 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.539      ;
+; -3.498 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.538      ;
+; -3.487 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.529      ;
+; -3.486 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.526      ;
+; -3.482 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.522      ;
+; -3.476 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.518      ;
+; -3.470 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.510      ;
+; -3.466 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.506      ;
+; -3.453 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[13] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.493      ;
+; -3.450 ; div_freq:u1|internaso[15] ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; -0.002     ; 4.488      ;
+; -3.449 ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.489      ;
+; -3.449 ; div_freq:u1|internaso[15] ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; -0.002     ; 4.487      ;
+; -3.448 ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.488      ;
+; -3.431 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[11] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.471      ;
+; -3.425 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.465      ;
+; -3.421 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[18] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.461      ;
+; -3.421 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.461      ;
+; -3.413 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[13] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.453      ;
+; -3.406 ; div_freq:u1|internaso[11] ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.448      ;
+; -3.394 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.434      ;
+; -3.391 ; div_freq:u1|internaso[15] ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.431      ;
+; -3.391 ; div_freq:u1|internaso[15] ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.431      ;
+; -3.390 ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.432      ;
+; -3.390 ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.432      ;
+; -3.378 ; div_freq:u1|internaso[11] ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.418      ;
+; -3.370 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.412      ;
+; -3.368 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.408      ;
+; -3.357 ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.397      ;
+; -3.352 ; div_freq:u1|internaso[11] ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.392      ;
+; -3.346 ; div_freq:u1|internaso[12] ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.388      ;
+; -3.341 ; div_freq:u1|internaso[11] ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.002      ; 4.383      ;
+; -3.328 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.368      ;
+; -3.327 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[13] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.367      ;
+; -3.316 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.356      ;
+; -3.312 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.352      ;
+; -3.301 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[11] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.341      ;
+; -3.300 ; div_freq:u1|internaso[12] ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 4.340      ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'div_freq:u1|salidasa'                                                                                                    ;
++--------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+; -0.506 ; cont4b:u2|interno[0] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 1.546      ;
+; -0.505 ; cont4b:u2|interno[0] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 1.545      ;
+; -0.450 ; cont4b:u2|interno[1] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 1.490      ;
+; -0.026 ; cont4b:u2|interno[0] ; cont4b:u2|interno[1] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 1.066      ;
+; -0.024 ; cont4b:u2|interno[1] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 1.064      ;
+; -0.021 ; cont4b:u2|interno[2] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 1.061      ;
+; 0.235  ; cont4b:u2|interno[0] ; cont4b:u2|interno[0] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; cont4b:u2|interno[3] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; cont4b:u2|interno[2] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; cont4b:u2|interno[1] ; cont4b:u2|interno[1] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.805      ;
++--------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'inclk'                                                                                                                     ;
++--------+---------------------------+---------------------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+----------------------+-------------+--------------+------------+------------+
+; -2.561 ; div_freq:u1|salidasa      ; div_freq:u1|salidasa      ; div_freq:u1|salidasa ; inclk       ; 0.000        ; 2.756      ; 0.805      ;
+; -2.061 ; div_freq:u1|salidasa      ; div_freq:u1|salidasa      ; div_freq:u1|salidasa ; inclk       ; -0.500       ; 2.756      ; 0.805      ;
+; 1.057  ; div_freq:u1|internaso[25] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.363      ;
+; 1.164  ; div_freq:u1|internaso[10] ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.470      ;
+; 1.172  ; div_freq:u1|internaso[8]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.478      ;
+; 1.172  ; div_freq:u1|internaso[15] ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.478      ;
+; 1.172  ; div_freq:u1|internaso[17] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.478      ;
+; 1.177  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[4]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.483      ;
+; 1.181  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[1]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.487      ;
+; 1.213  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.519      ;
+; 1.226  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[2]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.532      ;
+; 1.226  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[3]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.532      ;
+; 1.228  ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.534      ;
+; 1.229  ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.535      ;
+; 1.234  ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.540      ;
+; 1.651  ; div_freq:u1|internaso[8]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.957      ;
+; 1.652  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.958      ;
+; 1.656  ; div_freq:u1|internaso[24] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.962      ;
+; 1.657  ; div_freq:u1|internaso[22] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.963      ;
+; 1.660  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[1]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.966      ;
+; 1.660  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[2]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 1.966      ;
+; 1.706  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[4]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.012      ;
+; 1.706  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[3]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.012      ;
+; 1.709  ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.015      ;
+; 1.714  ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.020      ;
+; 1.737  ; div_freq:u1|internaso[15] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.043      ;
+; 1.737  ; div_freq:u1|internaso[8]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.043      ;
+; 1.738  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.044      ;
+; 1.742  ; div_freq:u1|internaso[24] ; div_freq:u1|internaso[24] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.048      ;
+; 1.744  ; div_freq:u1|internaso[22] ; div_freq:u1|internaso[22] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.050      ;
+; 1.746  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[2]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.052      ;
+; 1.746  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[3]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.052      ;
+; 1.766  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.072      ;
+; 1.779  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.085      ;
+; 1.792  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[4]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.098      ;
+; 1.794  ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.100      ;
+; 1.795  ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.101      ;
+; 1.824  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.130      ;
+; 1.829  ; div_freq:u1|internaso[22] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.135      ;
+; 1.832  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[3]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.138      ;
+; 1.832  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[4]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.138      ;
+; 1.880  ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.186      ;
+; 1.881  ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.187      ;
+; 1.896  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.202      ;
+; 1.909  ; div_freq:u1|internaso[14] ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.217      ;
+; 1.910  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.216      ;
+; 1.918  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[4]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.224      ;
+; 1.938  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.244      ;
+; 1.954  ; div_freq:u1|internaso[16] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.262      ;
+; 1.966  ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.272      ;
+; 1.982  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.288      ;
+; 1.995  ; div_freq:u1|internaso[13] ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.303      ;
+; 2.018  ; div_freq:u1|internaso[19] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.324      ;
+; 2.022  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.328      ;
+; 2.024  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.330      ;
+; 2.047  ; div_freq:u1|internaso[21] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.355      ;
+; 2.052  ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.358      ;
+; 2.068  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.374      ;
+; 2.074  ; div_freq:u1|internaso[10] ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.382      ;
+; 2.081  ; div_freq:u1|internaso[14] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.389      ;
+; 2.108  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.414      ;
+; 2.110  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.416      ;
+; 2.154  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.460      ;
+; 2.154  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.460      ;
+; 2.166  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[6]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.472      ;
+; 2.167  ; div_freq:u1|internaso[13] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.475      ;
+; 2.185  ; div_freq:u1|internaso[17] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.491      ;
+; 2.190  ; div_freq:u1|internaso[19] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.496      ;
+; 2.194  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.500      ;
+; 2.196  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.502      ;
+; 2.211  ; div_freq:u1|internaso[19] ; div_freq:u1|internaso[19] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.517      ;
+; 2.219  ; div_freq:u1|internaso[21] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.527      ;
+; 2.227  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[0]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.533      ;
+; 2.231  ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.539      ;
+; 2.240  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.546      ;
+; 2.240  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.546      ;
+; 2.243  ; div_freq:u1|internaso[20] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.551      ;
+; 2.246  ; div_freq:u1|internaso[10] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.554      ;
+; 2.254  ; div_freq:u1|internaso[8]  ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.562      ;
+; 2.258  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[24] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.564      ;
+; 2.280  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.586      ;
+; 2.280  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.586      ;
+; 2.308  ; div_freq:u1|internaso[22] ; div_freq:u1|internaso[24] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.614      ;
+; 2.315  ; div_freq:u1|internaso[14] ; div_freq:u1|internaso[14] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.621      ;
+; 2.326  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.632      ;
+; 2.326  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.632      ;
+; 2.357  ; div_freq:u1|internaso[15] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.663      ;
+; 2.357  ; div_freq:u1|internaso[17] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.663      ;
+; 2.358  ; div_freq:u1|internaso[16] ; div_freq:u1|internaso[16] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.664      ;
+; 2.366  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.672      ;
+; 2.366  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.672      ;
+; 2.390  ; div_freq:u1|internaso[18] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.698      ;
+; 2.398  ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.706      ;
+; 2.403  ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.711      ;
+; 2.412  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 2.718      ;
+; 2.415  ; div_freq:u1|internaso[20] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.723      ;
+; 2.426  ; div_freq:u1|internaso[8]  ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.734      ;
+; 2.427  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.002      ; 2.735      ;
+; 2.432  ; div_freq:u1|internaso[23] ; div_freq:u1|salidasa      ; inclk                ; inclk       ; 0.000        ; -0.002     ; 2.736      ;
+; 2.434  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[13] ; inclk                ; inclk       ; 0.000        ; -0.002     ; 2.738      ;
++--------+---------------------------+---------------------------+----------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'div_freq:u1|salidasa'                                                                                                    ;
++-------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+; 0.499 ; cont4b:u2|interno[0] ; cont4b:u2|interno[0] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; cont4b:u2|interno[1] ; cont4b:u2|interno[1] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; cont4b:u2|interno[2] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; cont4b:u2|interno[3] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.805      ;
+; 0.755 ; cont4b:u2|interno[2] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 1.061      ;
+; 0.758 ; cont4b:u2|interno[1] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 1.064      ;
+; 0.760 ; cont4b:u2|interno[0] ; cont4b:u2|interno[1] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 1.066      ;
+; 1.184 ; cont4b:u2|interno[1] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 1.490      ;
+; 1.239 ; cont4b:u2|interno[0] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 1.545      ;
+; 1.240 ; cont4b:u2|interno[0] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 1.546      ;
++-------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'inclk'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; inclk ; Rise       ; inclk                     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[0]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[0]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[10] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[10] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[11] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[11] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[12] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[12] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[13] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[13] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[14] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[14] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[15] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[15] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[16] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[16] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[17] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[17] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[18] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[18] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[19] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[19] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[1]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[1]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[20] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[20] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[21] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[21] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[22] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[22] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[23] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[23] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[24] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[24] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[25] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[25] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[2]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[2]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[3]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[3]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[4]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[4]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[5]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[5]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[6]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[6]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[7]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[7]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[8]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[8]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[9]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[9]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|salidasa      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|salidasa      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; inclk|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; inclk|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; inclk~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; inclk~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; inclk~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; inclk~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[0]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[0]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[10]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[10]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[11]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[11]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[12]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[12]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[13]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[13]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[14]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[14]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[15]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[15]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[16]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[16]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[17]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[17]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[18]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[18]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[19]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[19]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[20]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[20]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[21]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[21]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[22]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[22]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[23]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[23]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[24]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[24]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[25]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[25]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[3]|clk       ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'div_freq:u1|salidasa'                                                                       ;
++--------+--------------+----------------+------------------+----------------------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+----------------------+------------+------------------------------+
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[0]         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[0]         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[1]         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[1]         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[2]         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[2]         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[3]         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[3]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u1|salidasa|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u1|salidasa|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u2|interno[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u2|interno[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u2|interno[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u2|interno[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u2|interno[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u2|interno[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u2|interno[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u2|interno[3]|clk            ;
++--------+--------------+----------------+------------------+----------------------+------------+------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                  ;
++-----------+----------------------+--------+--------+------------+----------------------+
+; Data Port ; Clock Port           ; Rise   ; Fall   ; Clock Edge ; Clock Reference      ;
++-----------+----------------------+--------+--------+------------+----------------------+
+; sa        ; div_freq:u1|salidasa ; 9.536  ; 9.536  ; Rise       ; div_freq:u1|salidasa ;
+; sb        ; div_freq:u1|salidasa ; 9.535  ; 9.535  ; Rise       ; div_freq:u1|salidasa ;
+; sc        ; div_freq:u1|salidasa ; 9.530  ; 9.530  ; Rise       ; div_freq:u1|salidasa ;
+; sd        ; div_freq:u1|salidasa ; 9.514  ; 9.514  ; Rise       ; div_freq:u1|salidasa ;
+; se        ; div_freq:u1|salidasa ; 10.966 ; 10.966 ; Rise       ; div_freq:u1|salidasa ;
+; sf        ; div_freq:u1|salidasa ; 11.078 ; 11.078 ; Rise       ; div_freq:u1|salidasa ;
+; sg        ; div_freq:u1|salidasa ; 9.506  ; 9.506  ; Rise       ; div_freq:u1|salidasa ;
++-----------+----------------------+--------+--------+------------+----------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                          ;
++-----------+----------------------+--------+--------+------------+----------------------+
+; Data Port ; Clock Port           ; Rise   ; Fall   ; Clock Edge ; Clock Reference      ;
++-----------+----------------------+--------+--------+------------+----------------------+
+; sa        ; div_freq:u1|salidasa ; 9.153  ; 9.153  ; Rise       ; div_freq:u1|salidasa ;
+; sb        ; div_freq:u1|salidasa ; 9.148  ; 9.148  ; Rise       ; div_freq:u1|salidasa ;
+; sc        ; div_freq:u1|salidasa ; 9.175  ; 9.175  ; Rise       ; div_freq:u1|salidasa ;
+; sd        ; div_freq:u1|salidasa ; 9.126  ; 9.126  ; Rise       ; div_freq:u1|salidasa ;
+; se        ; div_freq:u1|salidasa ; 10.577 ; 10.577 ; Rise       ; div_freq:u1|salidasa ;
+; sf        ; div_freq:u1|salidasa ; 10.689 ; 10.689 ; Rise       ; div_freq:u1|salidasa ;
+; sg        ; div_freq:u1|salidasa ; 9.114  ; 9.114  ; Rise       ; div_freq:u1|salidasa ;
++-----------+----------------------+--------+--------+------------+----------------------+
+
+
++-----------------------------------------------+
+; Fast Model Setup Summary                      ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; inclk                ; -0.814 ; -10.275       ;
+; div_freq:u1|salidasa ; 0.502  ; 0.000         ;
++----------------------+--------+---------------+
+
+
++-----------------------------------------------+
+; Fast Model Hold Summary                       ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; inclk                ; -1.364 ; -1.364        ;
+; div_freq:u1|salidasa ; 0.215  ; 0.000         ;
++----------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------+
+; Fast Model Minimum Pulse Width Summary        ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; inclk                ; -1.380 ; -28.380       ;
+; div_freq:u1|salidasa ; -0.500 ; -4.000        ;
++----------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'inclk'                                                                                                            ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -0.814 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.846      ;
+; -0.779 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.811      ;
+; -0.758 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.791      ;
+; -0.755 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.787      ;
+; -0.723 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.756      ;
+; -0.720 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.752      ;
+; -0.711 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.743      ;
+; -0.699 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.732      ;
+; -0.688 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.721      ;
+; -0.676 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.708      ;
+; -0.670 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.702      ;
+; -0.664 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.697      ;
+; -0.658 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.691      ;
+; -0.657 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[18] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.689      ;
+; -0.653 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.686      ;
+; -0.652 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.684      ;
+; -0.630 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[25] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.663      ;
+; -0.629 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.662      ;
+; -0.623 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.656      ;
+; -0.622 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[18] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.654      ;
+; -0.617 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.649      ;
+; -0.614 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.647      ;
+; -0.599 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.632      ;
+; -0.598 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[18] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.630      ;
+; -0.595 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.627      ;
+; -0.595 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[25] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.628      ;
+; -0.594 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.626      ;
+; -0.594 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.627      ;
+; -0.584 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.617      ;
+; -0.584 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.617      ;
+; -0.573 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[13] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.605      ;
+; -0.571 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; div_freq:u1|internaso[11] ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[25] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.604      ;
+; -0.568 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.601      ;
+; -0.567 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.599      ;
+; -0.564 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.597      ;
+; -0.563 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[18] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.595      ;
+; -0.560 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[23] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.593      ;
+; -0.560 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.592      ;
+; -0.559 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[11] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.591      ;
+; -0.555 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.587      ;
+; -0.555 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.587      ;
+; -0.544 ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.576      ;
+; -0.538 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.571      ;
+; -0.538 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[13] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.570      ;
+; -0.536 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[25] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.569      ;
+; -0.536 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.568      ;
+; -0.535 ; div_freq:u1|internaso[12] ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.567      ;
+; -0.525 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[23] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.558      ;
+; -0.524 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.556      ;
+; -0.524 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[11] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.556      ;
+; -0.517 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.549      ;
+; -0.515 ; div_freq:u1|internaso[11] ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.548      ;
+; -0.514 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.547      ;
+; -0.514 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[13] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.546      ;
+; -0.513 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.545      ;
+; -0.513 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[18] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.545      ;
+; -0.508 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.540      ;
+; -0.506 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.539      ;
+; -0.505 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.537      ;
+; -0.505 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.537      ;
+; -0.501 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.533      ;
+; -0.501 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[23] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.534      ;
+; -0.501 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.533      ;
+; -0.500 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[11] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.532      ;
+; -0.497 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.529      ;
+; -0.493 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.525      ;
+; -0.493 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.525      ;
+; -0.491 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.523      ;
+; -0.488 ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.521      ;
+; -0.487 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.519      ;
+; -0.487 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.519      ;
+; -0.486 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[25] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.519      ;
+; -0.479 ; div_freq:u1|internaso[12] ; div_freq:u1|internaso[24] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.512      ;
+; -0.479 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[13] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.511      ;
+; -0.473 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.505      ;
+; -0.470 ; div_freq:u1|internaso[8]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.502      ;
+; -0.468 ; div_freq:u1|internaso[11] ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.500      ;
+; -0.466 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[23] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.499      ;
+; -0.466 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.498      ;
+; -0.466 ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[0]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.498      ;
+; -0.465 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[11] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.497      ;
+; -0.455 ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[21] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.487      ;
+; -0.455 ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.488      ;
+; -0.451 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[12] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.483      ;
+; -0.449 ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.481      ;
+; -0.447 ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.479      ;
+; -0.445 ; div_freq:u1|internaso[11] ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.478      ;
+; -0.442 ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[22] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.475      ;
+; -0.441 ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.473      ;
+; -0.439 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.471      ;
+; -0.438 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[19] ; inclk        ; inclk       ; 1.000        ; 0.001      ; 1.471      ;
+; -0.437 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[18] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.469      ;
+; -0.435 ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[14] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.467      ;
+; -0.433 ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[16] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.465      ;
+; -0.432 ; div_freq:u1|internaso[12] ; div_freq:u1|internaso[20] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.464      ;
+; -0.429 ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[13] ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.461      ;
+; -0.429 ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[6]  ; inclk        ; inclk       ; 1.000        ; 0.000      ; 1.461      ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'div_freq:u1|salidasa'                                                                                                   ;
++-------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+; 0.502 ; cont4b:u2|interno[0] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.530      ;
+; 0.503 ; cont4b:u2|interno[0] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.529      ;
+; 0.516 ; cont4b:u2|interno[1] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.516      ;
+; 0.633 ; cont4b:u2|interno[0] ; cont4b:u2|interno[1] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.399      ;
+; 0.635 ; cont4b:u2|interno[1] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.397      ;
+; 0.636 ; cont4b:u2|interno[2] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.396      ;
+; 0.665 ; cont4b:u2|interno[0] ; cont4b:u2|interno[0] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; cont4b:u2|interno[3] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; cont4b:u2|interno[2] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; cont4b:u2|interno[1] ; cont4b:u2|interno[1] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 1.000        ; 0.000      ; 0.367      ;
++-------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'inclk'                                                                                                                     ;
++--------+---------------------------+---------------------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+----------------------+-------------+--------------+------------+------------+
+; -1.364 ; div_freq:u1|salidasa      ; div_freq:u1|salidasa      ; div_freq:u1|salidasa ; inclk       ; 0.000        ; 1.438      ; 0.367      ;
+; -0.864 ; div_freq:u1|salidasa      ; div_freq:u1|salidasa      ; div_freq:u1|salidasa ; inclk       ; -0.500       ; 1.438      ; 0.367      ;
+; 0.328  ; div_freq:u1|internaso[25] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.480      ;
+; 0.357  ; div_freq:u1|internaso[10] ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358  ; div_freq:u1|internaso[8]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; div_freq:u1|internaso[15] ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; div_freq:u1|internaso[17] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.363  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[1]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[4]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.367  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.372  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[2]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[3]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.524      ;
+; 0.375  ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375  ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376  ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.528      ;
+; 0.496  ; div_freq:u1|internaso[8]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.648      ;
+; 0.499  ; div_freq:u1|internaso[24] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; div_freq:u1|internaso[22] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.652      ;
+; 0.501  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[1]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[2]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.653      ;
+; 0.512  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[4]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[3]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.664      ;
+; 0.515  ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.667      ;
+; 0.516  ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.668      ;
+; 0.524  ; div_freq:u1|internaso[22] ; div_freq:u1|internaso[22] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.676      ;
+; 0.524  ; div_freq:u1|internaso[24] ; div_freq:u1|internaso[24] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.676      ;
+; 0.531  ; div_freq:u1|internaso[15] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.683      ;
+; 0.531  ; div_freq:u1|internaso[8]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.683      ;
+; 0.535  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.687      ;
+; 0.536  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[2]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.688      ;
+; 0.536  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[3]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.688      ;
+; 0.542  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.694      ;
+; 0.547  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[4]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.699      ;
+; 0.550  ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.702      ;
+; 0.550  ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.702      ;
+; 0.556  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.708      ;
+; 0.569  ; div_freq:u1|internaso[22] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.721      ;
+; 0.570  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.722      ;
+; 0.571  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[3]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.723      ;
+; 0.571  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[4]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.723      ;
+; 0.577  ; div_freq:u1|internaso[14] ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.730      ;
+; 0.579  ; div_freq:u1|internaso[16] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.732      ;
+; 0.585  ; div_freq:u1|internaso[7]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.737      ;
+; 0.585  ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.737      ;
+; 0.605  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.757      ;
+; 0.606  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.758      ;
+; 0.606  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[4]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.758      ;
+; 0.612  ; div_freq:u1|internaso[13] ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.765      ;
+; 0.617  ; div_freq:u1|internaso[21] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.770      ;
+; 0.620  ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.772      ;
+; 0.626  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.778      ;
+; 0.641  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.793      ;
+; 0.647  ; div_freq:u1|internaso[14] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.800      ;
+; 0.651  ; div_freq:u1|internaso[6]  ; div_freq:u1|internaso[6]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.803      ;
+; 0.655  ; div_freq:u1|internaso[5]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.807      ;
+; 0.658  ; div_freq:u1|internaso[19] ; div_freq:u1|internaso[19] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.810      ;
+; 0.661  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.813      ;
+; 0.663  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[0]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.815      ;
+; 0.663  ; div_freq:u1|internaso[19] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.815      ;
+; 0.665  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.817      ;
+; 0.670  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[24] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.822      ;
+; 0.676  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.828      ;
+; 0.682  ; div_freq:u1|internaso[13] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.835      ;
+; 0.686  ; div_freq:u1|internaso[10] ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.839      ;
+; 0.687  ; div_freq:u1|internaso[21] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.840      ;
+; 0.692  ; div_freq:u1|internaso[14] ; div_freq:u1|internaso[14] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.844      ;
+; 0.693  ; div_freq:u1|internaso[16] ; div_freq:u1|internaso[16] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.845      ;
+; 0.696  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.848      ;
+; 0.697  ; div_freq:u1|internaso[22] ; div_freq:u1|internaso[24] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.849      ;
+; 0.700  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[5]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.852      ;
+; 0.708  ; div_freq:u1|internaso[20] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.861      ;
+; 0.711  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.863      ;
+; 0.711  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.863      ;
+; 0.730  ; div_freq:u1|internaso[17] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.882      ;
+; 0.731  ; div_freq:u1|internaso[4]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.883      ;
+; 0.733  ; div_freq:u1|internaso[19] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.885      ;
+; 0.735  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.887      ;
+; 0.742  ; div_freq:u1|internaso[9]  ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.895      ;
+; 0.745  ; div_freq:u1|internaso[21] ; div_freq:u1|internaso[22] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.898      ;
+; 0.746  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[9]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.898      ;
+; 0.746  ; div_freq:u1|internaso[2]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.898      ;
+; 0.748  ; div_freq:u1|internaso[15] ; div_freq:u1|internaso[16] ; inclk                ; inclk       ; 0.000        ; -0.001     ; 0.899      ;
+; 0.756  ; div_freq:u1|internaso[10] ; div_freq:u1|internaso[17] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.909      ;
+; 0.757  ; div_freq:u1|internaso[8]  ; div_freq:u1|internaso[15] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.910      ;
+; 0.760  ; div_freq:u1|internaso[20] ; div_freq:u1|internaso[20] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.912      ;
+; 0.762  ; div_freq:u1|internaso[23] ; div_freq:u1|salidasa      ; inclk                ; inclk       ; 0.000        ; -0.001     ; 0.913      ;
+; 0.767  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[13] ; inclk                ; inclk       ; 0.000        ; -0.001     ; 0.918      ;
+; 0.767  ; div_freq:u1|internaso[18] ; div_freq:u1|internaso[18] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.919      ;
+; 0.768  ; div_freq:u1|internaso[21] ; div_freq:u1|internaso[21] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.920      ;
+; 0.770  ; div_freq:u1|internaso[0]  ; div_freq:u1|internaso[7]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.922      ;
+; 0.770  ; div_freq:u1|internaso[1]  ; div_freq:u1|internaso[8]  ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.922      ;
+; 0.772  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[21] ; inclk                ; inclk       ; 0.000        ; -0.001     ; 0.923      ;
+; 0.773  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[11] ; inclk                ; inclk       ; 0.000        ; -0.001     ; 0.924      ;
+; 0.773  ; div_freq:u1|internaso[18] ; div_freq:u1|internaso[23] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.926      ;
+; 0.774  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[12] ; inclk                ; inclk       ; 0.000        ; -0.001     ; 0.925      ;
+; 0.774  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[20] ; inclk                ; inclk       ; 0.000        ; -0.001     ; 0.925      ;
+; 0.775  ; div_freq:u1|internaso[23] ; div_freq:u1|internaso[18] ; inclk                ; inclk       ; 0.000        ; -0.001     ; 0.926      ;
+; 0.778  ; div_freq:u1|internaso[20] ; div_freq:u1|internaso[25] ; inclk                ; inclk       ; 0.000        ; 0.001      ; 0.931      ;
+; 0.781  ; div_freq:u1|internaso[3]  ; div_freq:u1|internaso[10] ; inclk                ; inclk       ; 0.000        ; 0.000      ; 0.933      ;
++--------+---------------------------+---------------------------+----------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'div_freq:u1|salidasa'                                                                                                    ;
++-------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+; 0.215 ; cont4b:u2|interno[0] ; cont4b:u2|interno[0] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont4b:u2|interno[1] ; cont4b:u2|interno[1] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont4b:u2|interno[2] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; cont4b:u2|interno[3] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.367      ;
+; 0.244 ; cont4b:u2|interno[2] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.396      ;
+; 0.245 ; cont4b:u2|interno[1] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.397      ;
+; 0.247 ; cont4b:u2|interno[0] ; cont4b:u2|interno[1] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.399      ;
+; 0.364 ; cont4b:u2|interno[1] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.516      ;
+; 0.377 ; cont4b:u2|interno[0] ; cont4b:u2|interno[2] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; cont4b:u2|interno[0] ; cont4b:u2|interno[3] ; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 0.000        ; 0.000      ; 0.530      ;
++-------+----------------------+----------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'inclk'                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; inclk ; Rise       ; inclk                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|internaso[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|internaso[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; inclk ; Rise       ; div_freq:u1|salidasa      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; inclk ; Rise       ; div_freq:u1|salidasa      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; inclk|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; inclk|combout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; inclk~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; inclk~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; inclk~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; inclk~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[0]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[0]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[10]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[10]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[11]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[11]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[12]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[12]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[13]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[13]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[14]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[14]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[15]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[15]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[16]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[16]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[17]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[17]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[18]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[18]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[19]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[19]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[20]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[20]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[21]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[21]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[22]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[22]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[23]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[23]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[24]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[24]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[25]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[25]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; inclk ; Rise       ; u1|internaso[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; inclk ; Rise       ; u1|internaso[3]|clk       ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'div_freq:u1|salidasa'                                                                       ;
++--------+--------------+----------------+------------------+----------------------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+----------------------+------------+------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; cont4b:u2|interno[3]         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u1|salidasa|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u1|salidasa|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u2|interno[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u2|interno[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u2|interno[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u2|interno[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u2|interno[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u2|interno[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; div_freq:u1|salidasa ; Rise       ; u2|interno[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; div_freq:u1|salidasa ; Rise       ; u2|interno[3]|clk            ;
++--------+--------------+----------------+------------------+----------------------+------------+------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                ;
++-----------+----------------------+-------+-------+------------+----------------------+
+; Data Port ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++-----------+----------------------+-------+-------+------------+----------------------+
+; sa        ; div_freq:u1|salidasa ; 3.969 ; 3.969 ; Rise       ; div_freq:u1|salidasa ;
+; sb        ; div_freq:u1|salidasa ; 3.966 ; 3.966 ; Rise       ; div_freq:u1|salidasa ;
+; sc        ; div_freq:u1|salidasa ; 3.987 ; 3.987 ; Rise       ; div_freq:u1|salidasa ;
+; sd        ; div_freq:u1|salidasa ; 3.951 ; 3.951 ; Rise       ; div_freq:u1|salidasa ;
+; se        ; div_freq:u1|salidasa ; 4.506 ; 4.506 ; Rise       ; div_freq:u1|salidasa ;
+; sf        ; div_freq:u1|salidasa ; 4.508 ; 4.508 ; Rise       ; div_freq:u1|salidasa ;
+; sg        ; div_freq:u1|salidasa ; 3.937 ; 3.937 ; Rise       ; div_freq:u1|salidasa ;
++-----------+----------------------+-------+-------+------------+----------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                        ;
++-----------+----------------------+-------+-------+------------+----------------------+
+; Data Port ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++-----------+----------------------+-------+-------+------------+----------------------+
+; sa        ; div_freq:u1|salidasa ; 3.884 ; 3.884 ; Rise       ; div_freq:u1|salidasa ;
+; sb        ; div_freq:u1|salidasa ; 3.882 ; 3.882 ; Rise       ; div_freq:u1|salidasa ;
+; sc        ; div_freq:u1|salidasa ; 3.891 ; 3.891 ; Rise       ; div_freq:u1|salidasa ;
+; sd        ; div_freq:u1|salidasa ; 3.864 ; 3.864 ; Rise       ; div_freq:u1|salidasa ;
+; se        ; div_freq:u1|salidasa ; 4.419 ; 4.419 ; Rise       ; div_freq:u1|salidasa ;
+; sf        ; div_freq:u1|salidasa ; 4.414 ; 4.414 ; Rise       ; div_freq:u1|salidasa ;
+; sg        ; div_freq:u1|salidasa ; 3.854 ; 3.854 ; Rise       ; div_freq:u1|salidasa ;
++-----------+----------------------+-------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                 ;
++-----------------------+---------+--------+----------+---------+---------------------+
+; Clock                 ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack      ; -3.985  ; -2.561 ; N/A      ; N/A     ; -1.941              ;
+;  div_freq:u1|salidasa ; -0.506  ; 0.215  ; N/A      ; N/A     ; -0.742              ;
+;  inclk                ; -3.985  ; -2.561 ; N/A      ; N/A     ; -1.941              ;
+; Design-wide TNS       ; -76.391 ; -2.561 ; 0.0      ; 0.0     ; -47.945             ;
+;  div_freq:u1|salidasa ; -1.037  ; 0.000  ; N/A      ; N/A     ; -5.936              ;
+;  inclk                ; -75.354 ; -2.561 ; N/A      ; N/A     ; -42.009             ;
++-----------------------+---------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                  ;
++-----------+----------------------+--------+--------+------------+----------------------+
+; Data Port ; Clock Port           ; Rise   ; Fall   ; Clock Edge ; Clock Reference      ;
++-----------+----------------------+--------+--------+------------+----------------------+
+; sa        ; div_freq:u1|salidasa ; 9.536  ; 9.536  ; Rise       ; div_freq:u1|salidasa ;
+; sb        ; div_freq:u1|salidasa ; 9.535  ; 9.535  ; Rise       ; div_freq:u1|salidasa ;
+; sc        ; div_freq:u1|salidasa ; 9.530  ; 9.530  ; Rise       ; div_freq:u1|salidasa ;
+; sd        ; div_freq:u1|salidasa ; 9.514  ; 9.514  ; Rise       ; div_freq:u1|salidasa ;
+; se        ; div_freq:u1|salidasa ; 10.966 ; 10.966 ; Rise       ; div_freq:u1|salidasa ;
+; sf        ; div_freq:u1|salidasa ; 11.078 ; 11.078 ; Rise       ; div_freq:u1|salidasa ;
+; sg        ; div_freq:u1|salidasa ; 9.506  ; 9.506  ; Rise       ; div_freq:u1|salidasa ;
++-----------+----------------------+--------+--------+------------+----------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                        ;
++-----------+----------------------+-------+-------+------------+----------------------+
+; Data Port ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++-----------+----------------------+-------+-------+------------+----------------------+
+; sa        ; div_freq:u1|salidasa ; 3.884 ; 3.884 ; Rise       ; div_freq:u1|salidasa ;
+; sb        ; div_freq:u1|salidasa ; 3.882 ; 3.882 ; Rise       ; div_freq:u1|salidasa ;
+; sc        ; div_freq:u1|salidasa ; 3.891 ; 3.891 ; Rise       ; div_freq:u1|salidasa ;
+; sd        ; div_freq:u1|salidasa ; 3.864 ; 3.864 ; Rise       ; div_freq:u1|salidasa ;
+; se        ; div_freq:u1|salidasa ; 4.419 ; 4.419 ; Rise       ; div_freq:u1|salidasa ;
+; sf        ; div_freq:u1|salidasa ; 4.414 ; 4.414 ; Rise       ; div_freq:u1|salidasa ;
+; sg        ; div_freq:u1|salidasa ; 3.854 ; 3.854 ; Rise       ; div_freq:u1|salidasa ;
++-----------+----------------------+-------+-------+------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Setup Transfers                                                                         ;
++----------------------+----------------------+----------+----------+----------+----------+
+; From Clock           ; To Clock             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------+----------------------+----------+----------+----------+----------+
+; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 10       ; 0        ; 0        ; 0        ;
+; div_freq:u1|salidasa ; inclk                ; 1        ; 1        ; 0        ; 0        ;
+; inclk                ; inclk                ; 715      ; 0        ; 0        ; 0        ;
++----------------------+----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------+
+; Hold Transfers                                                                          ;
++----------------------+----------------------+----------+----------+----------+----------+
+; From Clock           ; To Clock             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------+----------------------+----------+----------+----------+----------+
+; div_freq:u1|salidasa ; div_freq:u1|salidasa ; 10       ; 0        ; 0        ; 0        ;
+; div_freq:u1|salidasa ; inclk                ; 1        ; 1        ; 0        ; 0        ;
+; inclk                ; inclk                ; 715      ; 0        ; 0        ; 0        ;
++----------------------+----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 4     ; 4    ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 28    ; 28   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Sep 11 10:30:57 2020
+Info: Command: quartus_sta ejemplo1 -c ejemplo1
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'ejemplo1.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name inclk inclk
+    Info (332105): create_clock -period 1.000 -name div_freq:u1|salidasa div_freq:u1|salidasa
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.985
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.985       -75.354 inclk 
+    Info (332119):    -0.506        -1.037 div_freq:u1|salidasa 
+Info (332146): Worst-case hold slack is -2.561
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.561        -2.561 inclk 
+    Info (332119):     0.499         0.000 div_freq:u1|salidasa 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941       -42.009 inclk 
+    Info (332119):    -0.742        -5.936 div_freq:u1|salidasa 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.814
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.814       -10.275 inclk 
+    Info (332119):     0.502         0.000 div_freq:u1|salidasa 
+Info (332146): Worst-case hold slack is -1.364
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.364        -1.364 inclk 
+    Info (332119):     0.215         0.000 div_freq:u1|salidasa 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -28.380 inclk 
+    Info (332119):    -0.500        -4.000 div_freq:u1|salidasa 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4529 megabytes
+    Info: Processing ended: Fri Sep 11 10:31:09 2020
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:03
+
+

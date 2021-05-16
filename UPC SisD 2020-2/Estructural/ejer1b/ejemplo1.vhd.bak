@@ -1,0 +1,16 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+entity ejemplo1 is
+	port (	inclk,rst:	in std_logic;
+				sa,sb,sc,sd,se,sf,sg,sdp,buzz: out std_logic;
+				hab: out std_logic_vector(7 downto 0));
+end ejemplo1;
+
+architecture flujaso of ejemplo1 is
+
+
+
+begin				

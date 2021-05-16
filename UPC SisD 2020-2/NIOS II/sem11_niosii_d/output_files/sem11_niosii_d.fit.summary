@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Nov 13 08:00:04 2020
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : sem11_niosii_d
+Top-level Entity Name : sem11_niosii_d
+Family : Cyclone II
+Device : EP2C5T144C8
+Timing Models : Final
+Total logic elements : 1,677 / 4,608 ( 36 % )
+    Total combinational functions : 1,565 / 4,608 ( 34 % )
+    Dedicated logic registers : 940 / 4,608 ( 20 % )
+Total registers : 940
+Total pins : 37 / 89 ( 42 % )
+Total virtual pins : 0
+Total memory bits : 44,032 / 119,808 ( 37 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,27 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity sem11_niosii_d is
+	port(	reloj:	in std_logic;
+			foquitos:	std_logic_vector(7 downto 0);
+			buzzer: out std_logic);
+end sem11_niosii_d;
+
+architecture flujo of sem11_niosii_d is
+
+    component nios_upc is
+        port (
+            clk_clk     : in  std_logic                    := 'X'; -- clk
+            leds_export : out std_logic_vector(7 downto 0)         -- export
+        );
+    end component nios_upc;
+
+
+begin	 
+    u0 : component nios_upc
+        port map (
+            clk_clk     => reloj,     --  clk.clk
+            leds_export => foquitos  -- leds.export
+        );
+	buzzer <= '1';
+end flujo;	

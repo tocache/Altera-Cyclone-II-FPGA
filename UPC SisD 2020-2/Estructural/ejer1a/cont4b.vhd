@@ -1,0 +1,30 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+entity cont4b is
+	port(	inclk, rst:	in std_logic;
+			q:		out std_logic_vector(3 downto 0));
+end cont4b;
+
+architecture flujo of cont4b is
+signal interno:	std_logic_vector(3 downto 0);
+begin
+		process(inclk, rst)
+		begin
+			if rst = '0' then
+				interno <= (others => '0');
+				
+			else
+				if rising_edge(inclk) then
+					if interno = "1111" then
+						interno <= (others => '0');	
+					else
+						interno <= interno + 1;
+					end if;
+				end if;
+			end if;
+		end process;
+		q <= interno;
+end flujo;

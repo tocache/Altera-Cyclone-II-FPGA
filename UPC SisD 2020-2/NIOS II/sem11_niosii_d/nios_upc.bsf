@@ -1,0 +1,105 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 272 272)
+	(text "nios_upc" (rect 110 -1 145 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 256 20 268)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 112 72)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "botones_export[7..0]" (rect 0 0 81 12)(font "Arial" (font_size 8)))
+		(text "botones_export[7..0]" (rect 4 229 124 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 112 240)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(output)
+		(text "leds_export[7..0]" (rect 0 0 66 12)(font "Arial" (font_size 8)))
+		(text "leds_export[7..0]" (rect 4 101 106 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 112 112)(line_width 3))
+	)
+	(port
+		(pt 0 152)
+		(output)
+		(text "lcd1602_RS" (rect 0 0 48 12)(font "Arial" (font_size 8)))
+		(text "lcd1602_RS" (rect 4 141 64 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 112 152)(line_width 1))
+	)
+	(port
+		(pt 0 168)
+		(output)
+		(text "lcd1602_RW" (rect 0 0 53 12)(font "Arial" (font_size 8)))
+		(text "lcd1602_RW" (rect 4 157 64 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 112 168)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(output)
+		(text "lcd1602_E" (rect 0 0 41 12)(font "Arial" (font_size 8)))
+		(text "lcd1602_E" (rect 4 189 58 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 112 200)(line_width 1))
+	)
+	(port
+		(pt 0 184)
+		(bidir)
+		(text "lcd1602_data[7..0]" (rect 0 0 70 12)(font "Arial" (font_size 8)))
+		(text "lcd1602_data[7..0]" (rect 4 173 112 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 112 184)(line_width 3))
+	)
+	(drawing
+		(text "clk" (rect 97 43 212 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 117 67 252 144)(font "Arial" (color 0 0 0)))
+		(text "leds" (rect 89 83 202 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 117 107 270 224)(font "Arial" (color 0 0 0)))
+		(text "lcd1602" (rect 71 123 184 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "RS" (rect 117 147 246 304)(font "Arial" (color 0 0 0)))
+		(text "RW" (rect 117 163 246 336)(font "Arial" (color 0 0 0)))
+		(text "data" (rect 117 179 258 368)(font "Arial" (color 0 0 0)))
+		(text "E" (rect 117 195 240 400)(font "Arial" (color 0 0 0)))
+		(text "botones" (rect 67 211 176 435)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 117 235 270 480)(font "Arial" (color 0 0 0)))
+		(text " nios_upc " (rect 231 256 522 522)(font "Arial" ))
+		(line (pt 113 52)(pt 113 76)(line_width 1))
+		(line (pt 114 52)(pt 114 76)(line_width 1))
+		(line (pt 113 92)(pt 113 116)(line_width 1))
+		(line (pt 114 92)(pt 114 116)(line_width 1))
+		(line (pt 113 132)(pt 113 204)(line_width 1))
+		(line (pt 114 132)(pt 114 204)(line_width 1))
+		(line (pt 113 220)(pt 113 244)(line_width 1))
+		(line (pt 114 220)(pt 114 244)(line_width 1))
+		(line (pt 112 32)(pt 160 32)(line_width 1))
+		(line (pt 160 32)(pt 160 256)(line_width 1))
+		(line (pt 112 256)(pt 160 256)(line_width 1))
+		(line (pt 112 32)(pt 112 256)(line_width 1))
+		(line (pt 0 0)(pt 272 0)(line_width 1))
+		(line (pt 272 0)(pt 272 272)(line_width 1))
+		(line (pt 0 272)(pt 272 272)(line_width 1))
+		(line (pt 0 0)(pt 0 272)(line_width 1))
+	)
+)

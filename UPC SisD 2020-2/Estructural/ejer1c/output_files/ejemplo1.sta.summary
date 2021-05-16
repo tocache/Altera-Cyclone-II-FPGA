@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'inclk'
+Slack : -3.985
+TNS   : -75.354
+
+Type  : Slow Model Setup 'div_freq:u1|salidasa'
+Slack : -0.506
+TNS   : -1.037
+
+Type  : Slow Model Hold 'inclk'
+Slack : -2.561
+TNS   : -2.561
+
+Type  : Slow Model Hold 'div_freq:u1|salidasa'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'inclk'
+Slack : -1.941
+TNS   : -42.009
+
+Type  : Slow Model Minimum Pulse Width 'div_freq:u1|salidasa'
+Slack : -0.742
+TNS   : -5.936
+
+Type  : Fast Model Setup 'inclk'
+Slack : -0.814
+TNS   : -10.275
+
+Type  : Fast Model Setup 'div_freq:u1|salidasa'
+Slack : 0.502
+TNS   : 0.000
+
+Type  : Fast Model Hold 'inclk'
+Slack : -1.364
+TNS   : -1.364
+
+Type  : Fast Model Hold 'div_freq:u1|salidasa'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'inclk'
+Slack : -1.380
+TNS   : -28.380
+
+Type  : Fast Model Minimum Pulse Width 'div_freq:u1|salidasa'
+Slack : -0.500
+TNS   : -4.000
+
+------------------------------------------------------------

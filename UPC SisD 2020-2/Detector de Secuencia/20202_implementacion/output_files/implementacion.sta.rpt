@@ -1,0 +1,1292 @@
+TimeQuest Timing Analyzer report for implementacion
+Sun Sep 27 18:56:41 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk_50'
+ 12. Slow Model Setup: 'clk_div:u1|salidasa'
+ 13. Slow Model Hold: 'clk_50'
+ 14. Slow Model Hold: 'clk_div:u1|salidasa'
+ 15. Slow Model Minimum Pulse Width: 'clk_50'
+ 16. Slow Model Minimum Pulse Width: 'clk_div:u1|salidasa'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'clk_50'
+ 29. Fast Model Setup: 'clk_div:u1|salidasa'
+ 30. Fast Model Hold: 'clk_50'
+ 31. Fast Model Hold: 'clk_div:u1|salidasa'
+ 32. Fast Model Minimum Pulse Width: 'clk_50'
+ 33. Fast Model Minimum Pulse Width: 'clk_div:u1|salidasa'
+ 34. Setup Times
+ 35. Hold Times
+ 36. Clock to Output Times
+ 37. Minimum Clock to Output Times
+ 38. Propagation Delay
+ 39. Minimum Propagation Delay
+ 40. Multicorner Timing Analysis Summary
+ 41. Setup Times
+ 42. Hold Times
+ 43. Clock to Output Times
+ 44. Minimum Clock to Output Times
+ 45. Progagation Delay
+ 46. Minimum Progagation Delay
+ 47. Setup Transfers
+ 48. Hold Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; implementacion                                                    ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5T144C8                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                   ;
++---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; Clock Name          ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                 ;
++---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; clk_50              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50 }              ;
+; clk_div:u1|salidasa ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_div:u1|salidasa } ;
++---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                    ;
++------------+-----------------+---------------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name          ; Note                                                  ;
++------------+-----------------+---------------------+-------------------------------------------------------+
+; 177.56 MHz ; 177.56 MHz      ; clk_50              ;                                                       ;
+; 673.4 MHz  ; 402.58 MHz      ; clk_div:u1|salidasa ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+---------------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------+
+; Slow Model Setup Summary                     ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; clk_50              ; -4.632 ; -90.022       ;
+; clk_div:u1|salidasa ; -0.485 ; -0.684        ;
++---------------------+--------+---------------+
+
+
++----------------------------------------------+
+; Slow Model Hold Summary                      ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; clk_50              ; -2.538 ; -2.538        ;
+; clk_div:u1|salidasa ; 0.737  ; 0.000         ;
++---------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------------+
+; Slow Model Minimum Pulse Width Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; clk_50              ; -1.941 ; -42.009       ;
+; clk_div:u1|salidasa ; -0.742 ; -7.420        ;
++---------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk_50'                                                                                                         ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -4.632 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 5.672      ;
+; -4.419 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 5.458      ;
+; -4.368 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 5.408      ;
+; -4.362 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 5.402      ;
+; -4.285 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 5.325      ;
+; -4.271 ; clk_div:u1|internaso[8]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 5.323      ;
+; -4.249 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 5.288      ;
+; -4.220 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 5.260      ;
+; -4.218 ; clk_div:u1|internaso[6]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 5.258      ;
+; -4.071 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 5.111      ;
+; -4.029 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 5.080      ;
+; -4.028 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 5.079      ;
+; -4.000 ; clk_div:u1|internaso[0]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 5.040      ;
+; -3.976 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 5.015      ;
+; -3.975 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 5.014      ;
+; -3.953 ; clk_div:u1|internaso[11] ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 5.005      ;
+; -3.945 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.985      ;
+; -3.940 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[25] ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 4.979      ;
+; -3.938 ; clk_div:u1|internaso[10] ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.990      ;
+; -3.930 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.982      ;
+; -3.930 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.982      ;
+; -3.929 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.981      ;
+; -3.920 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.972      ;
+; -3.884 ; clk_div:u1|internaso[5]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.936      ;
+; -3.878 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.930      ;
+; -3.877 ; clk_div:u1|internaso[3]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.929      ;
+; -3.877 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.917      ;
+; -3.877 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.917      ;
+; -3.876 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.916      ;
+; -3.867 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.907      ;
+; -3.863 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[11] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.903      ;
+; -3.854 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.894      ;
+; -3.848 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[11] ; clk_50       ; clk_50      ; 1.000        ; -0.012     ; 4.876      ;
+; -3.846 ; clk_div:u1|internaso[12] ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.886      ;
+; -3.845 ; clk_div:u1|internaso[9]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.897      ;
+; -3.837 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.889      ;
+; -3.834 ; clk_div:u1|internaso[4]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.886      ;
+; -3.810 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[11] ; clk_50       ; clk_50      ; 1.000        ; -0.012     ; 4.838      ;
+; -3.807 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.847      ;
+; -3.801 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.841      ;
+; -3.774 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.814      ;
+; -3.768 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[23] ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 4.807      ;
+; -3.768 ; clk_div:u1|internaso[2]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.820      ;
+; -3.756 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.808      ;
+; -3.743 ; clk_div:u1|internaso[1]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.795      ;
+; -3.733 ; clk_div:u1|internaso[7]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.785      ;
+; -3.724 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.764      ;
+; -3.718 ; clk_div:u1|internaso[15] ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.001      ; 4.759      ;
+; -3.711 ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.762      ;
+; -3.710 ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.761      ;
+; -3.696 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.747      ;
+; -3.695 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.746      ;
+; -3.665 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.716      ;
+; -3.649 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.689      ;
+; -3.642 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.693      ;
+; -3.641 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.692      ;
+; -3.635 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.686      ;
+; -3.634 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.685      ;
+; -3.626 ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.678      ;
+; -3.624 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.675      ;
+; -3.620 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.672      ;
+; -3.619 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.671      ;
+; -3.617 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.669      ;
+; -3.615 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.667      ;
+; -3.614 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.666      ;
+; -3.612 ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.664      ;
+; -3.612 ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.664      ;
+; -3.611 ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.663      ;
+; -3.608 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.660      ;
+; -3.607 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[13] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.659      ;
+; -3.604 ; clk_div:u1|internaso[12] ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 4.643      ;
+; -3.603 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[0]  ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.655      ;
+; -3.603 ; clk_div:u1|internaso[9]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.654      ;
+; -3.603 ; clk_div:u1|internaso[12] ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 4.642      ;
+; -3.602 ; clk_div:u1|internaso[9]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.653      ;
+; -3.602 ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.654      ;
+; -3.597 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.649      ;
+; -3.597 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.649      ;
+; -3.596 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.648      ;
+; -3.592 ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.643      ;
+; -3.591 ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.642      ;
+; -3.587 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.639      ;
+; -3.586 ; clk_div:u1|internaso[13] ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.626      ;
+; -3.573 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.625      ;
+; -3.567 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.619      ;
+; -3.554 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.594      ;
+; -3.550 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[0]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.590      ;
+; -3.545 ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[11] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.585      ;
+; -3.543 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.595      ;
+; -3.543 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.595      ;
+; -3.542 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.594      ;
+; -3.536 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.588      ;
+; -3.536 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.588      ;
+; -3.535 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.587      ;
+; -3.533 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.585      ;
+; -3.531 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.583      ;
+; -3.530 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[11] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.570      ;
+; -3.526 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 4.578      ;
+; -3.525 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.011      ; 4.576      ;
+; -3.517 ; clk_div:u1|internaso[12] ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 4.557      ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk_div:u1|salidasa'                                                                                               ;
++--------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock        ; Latch Clock         ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+; -0.485 ; ult_det:u2|es_p.J4 ; ult_det:u2|es_p.J1 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 1.525      ;
+; -0.174 ; ult_det:u2|es_p.J3 ; ult_det:u2|es_p.J4 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 1.214      ;
+; -0.013 ; ult_det:u2|es_p.J2 ; ult_det:u2|es_p.J3 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 1.053      ;
+; -0.011 ; ult_det:u2|es_p.J2 ; ult_det:u2|es_p.J1 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 1.051      ;
+; -0.009 ; ult_det:u2|es_p.J4 ; ult_det:u2|es_p.J5 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 1.049      ;
+; -0.009 ; ult_det:u2|es_p.J5 ; ult_det:u2|es_p.J4 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 1.049      ;
+; -0.003 ; ult_det:u2|es_p.J1 ; ult_det:u2|es_p.J2 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 1.043      ;
++--------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk_50'                                                                                                                 ;
++--------+--------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+; -2.538 ; clk_div:u1|salidasa      ; clk_div:u1|salidasa      ; clk_div:u1|salidasa ; clk_50      ; 0.000        ; 2.733      ; 0.805      ;
+; -2.038 ; clk_div:u1|salidasa      ; clk_div:u1|salidasa      ; clk_div:u1|salidasa ; clk_50      ; -0.500       ; 2.733      ; 0.805      ;
+; 1.163  ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.469      ;
+; 1.167  ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.473      ;
+; 1.172  ; clk_div:u1|internaso[15] ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.478      ;
+; 1.172  ; clk_div:u1|internaso[17] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.478      ;
+; 1.177  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[1]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[4]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.483      ;
+; 1.221  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[2]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.527      ;
+; 1.221  ; clk_div:u1|internaso[25] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.527      ;
+; 1.225  ; clk_div:u1|internaso[23] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.531      ;
+; 1.226  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[3]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.532      ;
+; 1.233  ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[5]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.539      ;
+; 1.234  ; clk_div:u1|internaso[7]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.540      ;
+; 1.235  ; clk_div:u1|internaso[9]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.541      ;
+; 1.642  ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.948      ;
+; 1.653  ; clk_div:u1|internaso[24] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.959      ;
+; 1.656  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[2]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.962      ;
+; 1.658  ; clk_div:u1|internaso[22] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 1.964      ;
+; 1.701  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[3]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.007      ;
+; 1.706  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[4]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.012      ;
+; 1.714  ; clk_div:u1|internaso[7]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.020      ;
+; 1.715  ; clk_div:u1|internaso[9]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.021      ;
+; 1.728  ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.034      ;
+; 1.737  ; clk_div:u1|internaso[15] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.043      ;
+; 1.739  ; clk_div:u1|internaso[24] ; clk_div:u1|internaso[24] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.045      ;
+; 1.742  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[3]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.048      ;
+; 1.746  ; clk_div:u1|internaso[22] ; clk_div:u1|internaso[22] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.052      ;
+; 1.766  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[5]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.072      ;
+; 1.787  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[4]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.093      ;
+; 1.791  ; clk_div:u1|internaso[23] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.097      ;
+; 1.799  ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.105      ;
+; 1.800  ; clk_div:u1|internaso[7]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.106      ;
+; 1.828  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[4]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.134      ;
+; 1.830  ; clk_div:u1|internaso[22] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.136      ;
+; 1.885  ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.191      ;
+; 1.886  ; clk_div:u1|internaso[7]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.192      ;
+; 1.896  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[5]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.202      ;
+; 1.938  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.244      ;
+; 1.957  ; clk_div:u1|internaso[14] ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.262      ;
+; 1.957  ; clk_div:u1|internaso[16] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.262      ;
+; 1.971  ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.277      ;
+; 1.977  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[5]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.283      ;
+; 2.018  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[5]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.324      ;
+; 2.024  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.330      ;
+; 2.031  ; clk_div:u1|internaso[13] ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.336      ;
+; 2.045  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.350      ;
+; 2.057  ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.363      ;
+; 2.068  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.374      ;
+; 2.068  ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.011      ; 2.385      ;
+; 2.110  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.416      ;
+; 2.124  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[0]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.430      ;
+; 2.128  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[13] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.434      ;
+; 2.129  ; clk_div:u1|internaso[14] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.434      ;
+; 2.136  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[20] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.442      ;
+; 2.138  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[21] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.444      ;
+; 2.140  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[19] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.446      ;
+; 2.141  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[18] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.447      ;
+; 2.149  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.455      ;
+; 2.154  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.460      ;
+; 2.185  ; clk_div:u1|internaso[17] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.491      ;
+; 2.190  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.496      ;
+; 2.196  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.502      ;
+; 2.196  ; clk_div:u1|internaso[20] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.501      ;
+; 2.203  ; clk_div:u1|internaso[13] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.508      ;
+; 2.217  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.522      ;
+; 2.223  ; clk_div:u1|internaso[9]  ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.011      ; 2.540      ;
+; 2.235  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.541      ;
+; 2.236  ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.011      ; 2.553      ;
+; 2.240  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.546      ;
+; 2.240  ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.011      ; 2.557      ;
+; 2.270  ; clk_div:u1|internaso[23] ; clk_div:u1|internaso[24] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.576      ;
+; 2.276  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.582      ;
+; 2.286  ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.011      ; 2.603      ;
+; 2.309  ; clk_div:u1|internaso[22] ; clk_div:u1|internaso[24] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.615      ;
+; 2.321  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.627      ;
+; 2.322  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.627      ;
+; 2.324  ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[1]  ; clk_50              ; clk_50      ; 0.000        ; -0.012     ; 2.618      ;
+; 2.326  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.632      ;
+; 2.345  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[0]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.651      ;
+; 2.349  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[13] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.655      ;
+; 2.357  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[20] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.663      ;
+; 2.357  ; clk_div:u1|internaso[15] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.663      ;
+; 2.357  ; clk_div:u1|internaso[17] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.663      ;
+; 2.359  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[21] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.665      ;
+; 2.361  ; clk_div:u1|internaso[16] ; clk_div:u1|internaso[16] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.667      ;
+; 2.361  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[19] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.667      ;
+; 2.362  ; clk_div:u1|internaso[14] ; clk_div:u1|internaso[14] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.668      ;
+; 2.362  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[18] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.668      ;
+; 2.362  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.668      ;
+; 2.368  ; clk_div:u1|internaso[20] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.673      ;
+; 2.383  ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; -0.012     ; 2.677      ;
+; 2.384  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[11] ; clk_50              ; clk_50      ; 0.000        ; -0.012     ; 2.678      ;
+; 2.392  ; clk_div:u1|internaso[20] ; clk_div:u1|internaso[20] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.698      ;
+; 2.393  ; clk_div:u1|internaso[18] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; -0.001     ; 2.698      ;
+; 2.394  ; clk_div:u1|internaso[7]  ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.011      ; 2.711      ;
+; 2.395  ; clk_div:u1|internaso[9]  ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.011      ; 2.712      ;
+; 2.407  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 2.713      ;
+; 2.408  ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.011      ; 2.725      ;
+; 2.410  ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[2]  ; clk_50              ; clk_50      ; 0.000        ; -0.012     ; 2.704      ;
++--------+--------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk_div:u1|salidasa'                                                                                               ;
++-------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock        ; Latch Clock         ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+; 0.737 ; ult_det:u2|es_p.J1 ; ult_det:u2|es_p.J2 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 1.043      ;
+; 0.743 ; ult_det:u2|es_p.J5 ; ult_det:u2|es_p.J4 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 1.049      ;
+; 0.743 ; ult_det:u2|es_p.J4 ; ult_det:u2|es_p.J5 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 1.049      ;
+; 0.745 ; ult_det:u2|es_p.J2 ; ult_det:u2|es_p.J1 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 1.051      ;
+; 0.747 ; ult_det:u2|es_p.J2 ; ult_det:u2|es_p.J3 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 1.053      ;
+; 0.908 ; ult_det:u2|es_p.J3 ; ult_det:u2|es_p.J4 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 1.214      ;
+; 1.219 ; ult_det:u2|es_p.J4 ; ult_det:u2|es_p.J1 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 1.525      ;
++-------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_50'                                                                   ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; clk_50 ; Rise       ; clk_50                   ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[0]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[0]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[10] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[10] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[11] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[11] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[12] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[12] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[13] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[13] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[14] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[14] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[15] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[15] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[16] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[16] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[17] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[17] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[18] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[18] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[19] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[19] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[1]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[1]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[20] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[20] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[21] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[21] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[22] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[22] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[23] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[23] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[24] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[24] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[25] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[25] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[2]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[2]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[3]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[3]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[4]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[4]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[5]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[5]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[6]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[6]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[7]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[7]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[8]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[8]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[9]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[9]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|salidasa      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|salidasa      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_50|combout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_50|combout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_50~clkctrl|inclk[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_50~clkctrl|inclk[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_50~clkctrl|outclk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_50~clkctrl|outclk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[21]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[21]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[22]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[22]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[23]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[23]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[24]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[24]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[25]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[25]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[3]|clk      ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_div:u1|salidasa'                                                                       ;
++--------+--------------+----------------+------------------+---------------------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock               ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+---------------------+------------+------------------------------+
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J1           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J1           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J2           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J2           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J3           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J3           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J4           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J4           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J5           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J5           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u1|salidasa|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u1|salidasa|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J1|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J1|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J2|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J2|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J3|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J3|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J4|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J4|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J5|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J5|clk               ;
++--------+--------------+----------------+------------------+---------------------+------------+------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; boton     ; clk_div:u1|salidasa ; 5.913 ; 5.913 ; Rise       ; clk_div:u1|salidasa ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Hold Times                                                                           ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise   ; Fall   ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; boton     ; clk_div:u1|salidasa ; -5.342 ; -5.342 ; Rise       ; clk_div:u1|salidasa ;
++-----------+---------------------+--------+--------+------------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Clock to Output Times                                                              ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; led_clk   ; clk_div:u1|salidasa ;       ; 6.751 ; Rise       ; clk_div:u1|salidasa ;
+; led_det   ; clk_div:u1|salidasa ; 9.480 ; 9.480 ; Rise       ; clk_div:u1|salidasa ;
+; led_clk   ; clk_div:u1|salidasa ; 6.751 ;       ; Fall       ; clk_div:u1|salidasa ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                      ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; led_clk   ; clk_div:u1|salidasa ;       ; 6.751 ; Rise       ; clk_div:u1|salidasa ;
+; led_det   ; clk_div:u1|salidasa ; 9.480 ; 9.480 ; Rise       ; clk_div:u1|salidasa ;
+; led_clk   ; clk_div:u1|salidasa ; 6.751 ;       ; Fall       ; clk_div:u1|salidasa ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; boton      ; led_det     ; 13.253 ;    ;    ; 13.253 ;
++------------+-------------+--------+----+----+--------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; boton      ; led_det     ; 13.253 ;    ;    ; 13.253 ;
++------------+-------------+--------+----+----+--------+
+
+
++----------------------------------------------+
+; Fast Model Setup Summary                     ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; clk_50              ; -0.998 ; -13.427       ;
+; clk_div:u1|salidasa ; 0.507  ; 0.000         ;
++---------------------+--------+---------------+
+
+
++----------------------------------------------+
+; Fast Model Hold Summary                      ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; clk_50              ; -1.345 ; -1.345        ;
+; clk_div:u1|salidasa ; 0.239  ; 0.000         ;
++---------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------------+
+; Fast Model Minimum Pulse Width Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; clk_50              ; -1.380 ; -28.380       ;
+; clk_div:u1|salidasa ; -0.500 ; -5.000        ;
++---------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk_50'                                                                                                         ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -0.998 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 2.030      ;
+; -0.945 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.977      ;
+; -0.899 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.931      ;
+; -0.876 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.908      ;
+; -0.872 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.904      ;
+; -0.843 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.875      ;
+; -0.817 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[25] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.849      ;
+; -0.765 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.809      ;
+; -0.747 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[23] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.779      ;
+; -0.746 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.778      ;
+; -0.741 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.785      ;
+; -0.712 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.756      ;
+; -0.710 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.742      ;
+; -0.706 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.750      ;
+; -0.697 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.729      ;
+; -0.693 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.725      ;
+; -0.688 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.732      ;
+; -0.666 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.698      ;
+; -0.666 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.710      ;
+; -0.656 ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.700      ;
+; -0.653 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.697      ;
+; -0.647 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.679      ;
+; -0.643 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.687      ;
+; -0.642 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.686      ;
+; -0.639 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.683      ;
+; -0.628 ; clk_div:u1|internaso[8]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.013      ; 1.673      ;
+; -0.627 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.659      ;
+; -0.624 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.656      ;
+; -0.620 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.652      ;
+; -0.619 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.663      ;
+; -0.615 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.659      ;
+; -0.610 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.654      ;
+; -0.607 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.651      ;
+; -0.603 ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.647      ;
+; -0.596 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[11] ; clk_50       ; clk_50      ; 1.000        ; -0.012     ; 1.616      ;
+; -0.591 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.635      ;
+; -0.591 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.635      ;
+; -0.590 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.634      ;
+; -0.586 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.630      ;
+; -0.584 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.628      ;
+; -0.584 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[25] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.628      ;
+; -0.582 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.626      ;
+; -0.581 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.625      ;
+; -0.580 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.624      ;
+; -0.579 ; clk_div:u1|internaso[6]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.001      ; 1.612      ;
+; -0.566 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.610      ;
+; -0.566 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.610      ;
+; -0.565 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[25] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.597      ;
+; -0.560 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[25] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.604      ;
+; -0.557 ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.601      ;
+; -0.551 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.595      ;
+; -0.542 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.574      ;
+; -0.542 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.574      ;
+; -0.541 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.573      ;
+; -0.538 ; clk_div:u1|internaso[10] ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.013      ; 1.583      ;
+; -0.534 ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.578      ;
+; -0.533 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.565      ;
+; -0.530 ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.574      ;
+; -0.528 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.572      ;
+; -0.528 ; clk_div:u1|internaso[0]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.001      ; 1.561      ;
+; -0.527 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[11] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.559      ;
+; -0.525 ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[25] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.569      ;
+; -0.520 ; clk_div:u1|internaso[5]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.013      ; 1.565      ;
+; -0.514 ; clk_div:u1|internaso[12] ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.546      ;
+; -0.514 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[23] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.558      ;
+; -0.513 ; clk_div:u1|internaso[7]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.557      ;
+; -0.503 ; clk_div:u1|internaso[11] ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.013      ; 1.548      ;
+; -0.501 ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.545      ;
+; -0.501 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.545      ;
+; -0.501 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.545      ;
+; -0.500 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.544      ;
+; -0.500 ; clk_div:u1|internaso[4]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.013      ; 1.545      ;
+; -0.495 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[23] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.527      ;
+; -0.492 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.536      ;
+; -0.490 ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[23] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.534      ;
+; -0.483 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.527      ;
+; -0.483 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.527      ;
+; -0.482 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.526      ;
+; -0.482 ; clk_div:u1|internaso[9]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.013      ; 1.527      ;
+; -0.482 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.514      ;
+; -0.482 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.526      ;
+; -0.478 ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.510      ;
+; -0.478 ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[11] ; clk_50       ; clk_50      ; 1.000        ; -0.012     ; 1.498      ;
+; -0.477 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.521      ;
+; -0.476 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[24] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.520      ;
+; -0.476 ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[22] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.520      ;
+; -0.475 ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[25] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.519      ;
+; -0.474 ; clk_div:u1|internaso[12] ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.001      ; 1.507      ;
+; -0.474 ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[6]  ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.518      ;
+; -0.473 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[18] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.517      ;
+; -0.473 ; clk_div:u1|internaso[2]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.013      ; 1.518      ;
+; -0.472 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[19] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.516      ;
+; -0.471 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[21] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.515      ;
+; -0.469 ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[20] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.513      ;
+; -0.466 ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[12] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.510      ;
+; -0.466 ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.510      ;
+; -0.466 ; clk_div:u1|internaso[3]  ; clk_div:u1|salidasa      ; clk_50       ; clk_50      ; 1.000        ; 0.013      ; 1.511      ;
+; -0.465 ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[14] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.509      ;
+; -0.464 ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[16] ; clk_50       ; clk_50      ; 1.000        ; 0.012      ; 1.508      ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk_div:u1|salidasa'                                                                                              ;
++-------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock        ; Latch Clock         ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+; 0.507 ; ult_det:u2|es_p.J4 ; ult_det:u2|es_p.J1 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 0.525      ;
+; 0.594 ; ult_det:u2|es_p.J3 ; ult_det:u2|es_p.J4 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 0.438      ;
+; 0.635 ; ult_det:u2|es_p.J2 ; ult_det:u2|es_p.J1 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 0.397      ;
+; 0.638 ; ult_det:u2|es_p.J2 ; ult_det:u2|es_p.J3 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 0.394      ;
+; 0.641 ; ult_det:u2|es_p.J1 ; ult_det:u2|es_p.J2 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 0.391      ;
+; 0.641 ; ult_det:u2|es_p.J4 ; ult_det:u2|es_p.J5 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 0.391      ;
+; 0.641 ; ult_det:u2|es_p.J5 ; ult_det:u2|es_p.J4 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 1.000        ; 0.000      ; 0.391      ;
++-------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk_50'                                                                                                                 ;
++--------+--------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+; -1.345 ; clk_div:u1|salidasa      ; clk_div:u1|salidasa      ; clk_div:u1|salidasa ; clk_50      ; 0.000        ; 1.419      ; 0.367      ;
+; -0.845 ; clk_div:u1|salidasa      ; clk_div:u1|salidasa      ; clk_div:u1|salidasa ; clk_50      ; -0.500       ; 1.419      ; 0.367      ;
+; 0.356  ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.508      ;
+; 0.358  ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; clk_div:u1|internaso[15] ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; clk_div:u1|internaso[17] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.510      ;
+; 0.363  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[1]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[4]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.371  ; clk_div:u1|internaso[23] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[2]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[3]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372  ; clk_div:u1|internaso[25] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.524      ;
+; 0.376  ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[5]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.528      ;
+; 0.378  ; clk_div:u1|internaso[7]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378  ; clk_div:u1|internaso[9]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.494  ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.646      ;
+; 0.499  ; clk_div:u1|internaso[24] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500  ; clk_div:u1|internaso[22] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.652      ;
+; 0.501  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[2]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.653      ;
+; 0.512  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[4]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[3]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.664      ;
+; 0.518  ; clk_div:u1|internaso[7]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.670      ;
+; 0.518  ; clk_div:u1|internaso[9]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.670      ;
+; 0.524  ; clk_div:u1|internaso[24] ; clk_div:u1|internaso[24] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.676      ;
+; 0.526  ; clk_div:u1|internaso[22] ; clk_div:u1|internaso[22] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.678      ;
+; 0.529  ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.681      ;
+; 0.531  ; clk_div:u1|internaso[15] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.683      ;
+; 0.536  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[3]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.688      ;
+; 0.546  ; clk_div:u1|internaso[23] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[4]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.699      ;
+; 0.551  ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.703      ;
+; 0.553  ; clk_div:u1|internaso[7]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.705      ;
+; 0.556  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[5]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.708      ;
+; 0.570  ; clk_div:u1|internaso[22] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.722      ;
+; 0.571  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[4]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.723      ;
+; 0.580  ; clk_div:u1|internaso[16] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.732      ;
+; 0.581  ; clk_div:u1|internaso[14] ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.733      ;
+; 0.586  ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.738      ;
+; 0.588  ; clk_div:u1|internaso[7]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.606  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[5]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.758      ;
+; 0.609  ; clk_div:u1|internaso[13] ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.761      ;
+; 0.616  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.768      ;
+; 0.621  ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.773      ;
+; 0.626  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.778      ;
+; 0.641  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[5]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.793      ;
+; 0.651  ; clk_div:u1|internaso[14] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.803      ;
+; 0.656  ; clk_div:u1|internaso[5]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.808      ;
+; 0.661  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.813      ;
+; 0.665  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[5]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.817      ;
+; 0.674  ; clk_div:u1|internaso[23] ; clk_div:u1|internaso[24] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.826      ;
+; 0.676  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[0]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.828      ;
+; 0.676  ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.012      ; 0.840      ;
+; 0.676  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.828      ;
+; 0.679  ; clk_div:u1|internaso[13] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.831      ;
+; 0.680  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[13] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.832      ;
+; 0.686  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.838      ;
+; 0.687  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[20] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.839      ;
+; 0.689  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[21] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.841      ;
+; 0.690  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[19] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.842      ;
+; 0.691  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[18] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.843      ;
+; 0.696  ; clk_div:u1|internaso[16] ; clk_div:u1|internaso[16] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.848      ;
+; 0.696  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.848      ;
+; 0.697  ; clk_div:u1|internaso[14] ; clk_div:u1|internaso[14] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.849      ;
+; 0.698  ; clk_div:u1|internaso[22] ; clk_div:u1|internaso[24] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.850      ;
+; 0.699  ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[1]  ; clk_50              ; clk_50      ; 0.000        ; -0.012     ; 0.839      ;
+; 0.703  ; clk_div:u1|internaso[20] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.855      ;
+; 0.711  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.863      ;
+; 0.711  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.863      ;
+; 0.716  ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; -0.012     ; 0.856      ;
+; 0.723  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[0]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.875      ;
+; 0.723  ; clk_div:u1|internaso[11] ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.012      ; 0.887      ;
+; 0.727  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[13] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.879      ;
+; 0.730  ; clk_div:u1|internaso[17] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.882      ;
+; 0.731  ; clk_div:u1|internaso[4]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.883      ;
+; 0.733  ; clk_div:u1|internaso[9]  ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.012      ; 0.897      ;
+; 0.734  ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[2]  ; clk_50              ; clk_50      ; 0.000        ; -0.012     ; 0.874      ;
+; 0.734  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[20] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.886      ;
+; 0.735  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[7]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.887      ;
+; 0.736  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[21] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.888      ;
+; 0.737  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[19] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.889      ;
+; 0.738  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[18] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.890      ;
+; 0.744  ; clk_div:u1|internaso[8]  ; clk_div:u1|internaso[15] ; clk_50              ; clk_50      ; 0.000        ; 0.012      ; 0.908      ;
+; 0.745  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[11] ; clk_50              ; clk_50      ; 0.000        ; -0.012     ; 0.885      ;
+; 0.745  ; clk_div:u1|internaso[21] ; clk_div:u1|internaso[22] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.897      ;
+; 0.746  ; clk_div:u1|internaso[10] ; clk_div:u1|internaso[17] ; clk_50              ; clk_50      ; 0.000        ; 0.012      ; 0.910      ;
+; 0.746  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.898      ;
+; 0.746  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.898      ;
+; 0.746  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.898      ;
+; 0.750  ; clk_div:u1|internaso[15] ; clk_div:u1|internaso[16] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.902      ;
+; 0.751  ; clk_div:u1|internaso[6]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; -0.012     ; 0.891      ;
+; 0.755  ; clk_div:u1|internaso[20] ; clk_div:u1|internaso[20] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.907      ;
+; 0.764  ; clk_div:u1|internaso[13] ; clk_div:u1|internaso[13] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.916      ;
+; 0.767  ; clk_div:u1|internaso[18] ; clk_div:u1|internaso[18] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.919      ;
+; 0.769  ; clk_div:u1|internaso[0]  ; clk_div:u1|internaso[3]  ; clk_50              ; clk_50      ; 0.000        ; -0.012     ; 0.909      ;
+; 0.770  ; clk_div:u1|internaso[1]  ; clk_div:u1|internaso[8]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.922      ;
+; 0.773  ; clk_div:u1|internaso[20] ; clk_div:u1|internaso[25] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.925      ;
+; 0.774  ; clk_div:u1|internaso[18] ; clk_div:u1|internaso[23] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.926      ;
+; 0.781  ; clk_div:u1|internaso[3]  ; clk_div:u1|internaso[10] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.933      ;
+; 0.781  ; clk_div:u1|internaso[2]  ; clk_div:u1|internaso[9]  ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.933      ;
+; 0.784  ; clk_div:u1|internaso[19] ; clk_div:u1|internaso[24] ; clk_50              ; clk_50      ; 0.000        ; 0.000      ; 0.936      ;
++--------+--------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk_div:u1|salidasa'                                                                                               ;
++-------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock        ; Latch Clock         ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+; 0.239 ; ult_det:u2|es_p.J1 ; ult_det:u2|es_p.J2 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; ult_det:u2|es_p.J5 ; ult_det:u2|es_p.J4 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; ult_det:u2|es_p.J4 ; ult_det:u2|es_p.J5 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 0.391      ;
+; 0.242 ; ult_det:u2|es_p.J2 ; ult_det:u2|es_p.J3 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 0.394      ;
+; 0.245 ; ult_det:u2|es_p.J2 ; ult_det:u2|es_p.J1 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 0.397      ;
+; 0.286 ; ult_det:u2|es_p.J3 ; ult_det:u2|es_p.J4 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 0.438      ;
+; 0.373 ; ult_det:u2|es_p.J4 ; ult_det:u2|es_p.J1 ; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 0.000        ; 0.000      ; 0.525      ;
++-------+--------------------+--------------------+---------------------+---------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_50'                                                                   ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk_50 ; Rise       ; clk_50                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|internaso[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|internaso[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_div:u1|salidasa      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_div:u1|salidasa      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_50|combout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_50|combout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_50~clkctrl|inclk[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_50~clkctrl|inclk[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; clk_50~clkctrl|outclk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; clk_50~clkctrl|outclk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[10]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[11]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[12]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[13]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[14]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[15]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[16]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[17]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[18]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[19]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[20]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[21]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[21]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[22]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[22]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[23]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[23]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[24]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[24]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[25]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[25]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_50 ; Rise       ; u1|internaso[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_50 ; Rise       ; u1|internaso[3]|clk      ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_div:u1|salidasa'                                                                       ;
++--------+--------------+----------------+------------------+---------------------+------------+------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock               ; Clock Edge ; Target                       ;
++--------+--------------+----------------+------------------+---------------------+------------+------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J1           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J1           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J2           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J2           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J3           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J3           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J4           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J4           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J5           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; ult_det:u2|es_p.J5           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u1|salidasa|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u1|salidasa|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u1|salidasa~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J1|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J1|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J2|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J2|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J3|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J3|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J4|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J4|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J5|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_div:u1|salidasa ; Rise       ; u2|es_p.J5|clk               ;
++--------+--------------+----------------+------------------+---------------------+------------+------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; boton     ; clk_div:u1|salidasa ; 2.735 ; 2.735 ; Rise       ; clk_div:u1|salidasa ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Hold Times                                                                           ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise   ; Fall   ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; boton     ; clk_div:u1|salidasa ; -2.527 ; -2.527 ; Rise       ; clk_div:u1|salidasa ;
++-----------+---------------------+--------+--------+------------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Clock to Output Times                                                              ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; led_clk   ; clk_div:u1|salidasa ;       ; 2.648 ; Rise       ; clk_div:u1|salidasa ;
+; led_det   ; clk_div:u1|salidasa ; 3.907 ; 3.907 ; Rise       ; clk_div:u1|salidasa ;
+; led_clk   ; clk_div:u1|salidasa ; 2.648 ;       ; Fall       ; clk_div:u1|salidasa ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                      ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; led_clk   ; clk_div:u1|salidasa ;       ; 2.648 ; Rise       ; clk_div:u1|salidasa ;
+; led_det   ; clk_div:u1|salidasa ; 3.907 ; 3.907 ; Rise       ; clk_div:u1|salidasa ;
+; led_clk   ; clk_div:u1|salidasa ; 2.648 ;       ; Fall       ; clk_div:u1|salidasa ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; boton      ; led_det     ; 5.986 ;    ;    ; 5.986 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; boton      ; led_det     ; 5.986 ;    ;    ; 5.986 ;
++------------+-------------+-------+----+----+-------+
+
+
++------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                ;
++----------------------+---------+--------+----------+---------+---------------------+
+; Clock                ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack     ; -4.632  ; -2.538 ; N/A      ; N/A     ; -1.941              ;
+;  clk_50              ; -4.632  ; -2.538 ; N/A      ; N/A     ; -1.941              ;
+;  clk_div:u1|salidasa ; -0.485  ; 0.239  ; N/A      ; N/A     ; -0.742              ;
+; Design-wide TNS      ; -90.706 ; -2.538 ; 0.0      ; 0.0     ; -49.429             ;
+;  clk_50              ; -90.022 ; -2.538 ; N/A      ; N/A     ; -42.009             ;
+;  clk_div:u1|salidasa ; -0.684  ; 0.000  ; N/A      ; N/A     ; -7.420              ;
++----------------------+---------+--------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; boton     ; clk_div:u1|salidasa ; 5.913 ; 5.913 ; Rise       ; clk_div:u1|salidasa ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Hold Times                                                                           ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise   ; Fall   ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; boton     ; clk_div:u1|salidasa ; -2.527 ; -2.527 ; Rise       ; clk_div:u1|salidasa ;
++-----------+---------------------+--------+--------+------------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Clock to Output Times                                                              ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; led_clk   ; clk_div:u1|salidasa ;       ; 6.751 ; Rise       ; clk_div:u1|salidasa ;
+; led_det   ; clk_div:u1|salidasa ; 9.480 ; 9.480 ; Rise       ; clk_div:u1|salidasa ;
+; led_clk   ; clk_div:u1|salidasa ; 6.751 ;       ; Fall       ; clk_div:u1|salidasa ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                      ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; led_clk   ; clk_div:u1|salidasa ;       ; 2.648 ; Rise       ; clk_div:u1|salidasa ;
+; led_det   ; clk_div:u1|salidasa ; 3.907 ; 3.907 ; Rise       ; clk_div:u1|salidasa ;
+; led_clk   ; clk_div:u1|salidasa ; 2.648 ;       ; Fall       ; clk_div:u1|salidasa ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++------------------------------------------------------+
+; Progagation Delay                                    ;
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; boton      ; led_det     ; 13.253 ;    ;    ; 13.253 ;
++------------+-------------+--------+----+----+--------+
+
+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; boton      ; led_det     ; 5.986 ;    ;    ; 5.986 ;
++------------+-------------+-------+----+----+-------+
+
+
++---------------------------------------------------------------------------------------+
+; Setup Transfers                                                                       ;
++---------------------+---------------------+----------+----------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------+---------------------+----------+----------+----------+----------+
+; clk_50              ; clk_50              ; 715      ; 0        ; 0        ; 0        ;
+; clk_div:u1|salidasa ; clk_50              ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 7        ; 0        ; 0        ; 0        ;
++---------------------+---------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------+
+; Hold Transfers                                                                        ;
++---------------------+---------------------+----------+----------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------+---------------------+----------+----------+----------+----------+
+; clk_50              ; clk_50              ; 715      ; 0        ; 0        ; 0        ;
+; clk_div:u1|salidasa ; clk_50              ; 1        ; 1        ; 0        ; 0        ;
+; clk_div:u1|salidasa ; clk_div:u1|salidasa ; 7        ; 0        ; 0        ; 0        ;
++---------------------+---------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 6     ; 6    ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 3     ; 3    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Sep 27 18:56:32 2020
+Info: Command: quartus_sta implementacion -c implementacion
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'implementacion.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_50 clk_50
+    Info (332105): create_clock -period 1.000 -name clk_div:u1|salidasa clk_div:u1|salidasa
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.632
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.632       -90.022 clk_50 
+    Info (332119):    -0.485        -0.684 clk_div:u1|salidasa 
+Info (332146): Worst-case hold slack is -2.538
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.538        -2.538 clk_50 
+    Info (332119):     0.737         0.000 clk_div:u1|salidasa 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941       -42.009 clk_50 
+    Info (332119):    -0.742        -7.420 clk_div:u1|salidasa 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.998
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.998       -13.427 clk_50 
+    Info (332119):     0.507         0.000 clk_div:u1|salidasa 
+Info (332146): Worst-case hold slack is -1.345
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.345        -1.345 clk_50 
+    Info (332119):     0.239         0.000 clk_div:u1|salidasa 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -28.380 clk_50 
+    Info (332119):    -0.500        -5.000 clk_div:u1|salidasa 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4529 megabytes
+    Info: Processing ended: Sun Sep 27 18:56:41 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:02
+
+

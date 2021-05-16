@@ -1,0 +1,106 @@
+|ejemplo1
+inclk => div_freq:u1.inclk
+rst => cont4b:u2.rst
+buzz <= <VCC>
+sa <= decbin7sac:u3.sa
+sb <= decbin7sac:u3.sb
+sc <= decbin7sac:u3.sc
+sd <= decbin7sac:u3.sd
+se <= decbin7sac:u3.se
+sf <= decbin7sac:u3.sf
+sg <= decbin7sac:u3.sg
+sdp <= <VCC>
+hab[0] <= <GND>
+hab[1] <= <VCC>
+hab[2] <= <VCC>
+hab[3] <= <VCC>
+hab[4] <= <VCC>
+hab[5] <= <VCC>
+hab[6] <= <VCC>
+hab[7] <= <VCC>
+
+
+|ejemplo1|div_freq:u1
+inclk => salidasa.CLK
+inclk => internaso[0].CLK
+inclk => internaso[1].CLK
+inclk => internaso[2].CLK
+inclk => internaso[3].CLK
+inclk => internaso[4].CLK
+inclk => internaso[5].CLK
+inclk => internaso[6].CLK
+inclk => internaso[7].CLK
+inclk => internaso[8].CLK
+inclk => internaso[9].CLK
+inclk => internaso[10].CLK
+inclk => internaso[11].CLK
+inclk => internaso[12].CLK
+inclk => internaso[13].CLK
+inclk => internaso[14].CLK
+inclk => internaso[15].CLK
+inclk => internaso[16].CLK
+inclk => internaso[17].CLK
+inclk => internaso[18].CLK
+inclk => internaso[19].CLK
+inclk => internaso[20].CLK
+inclk => internaso[21].CLK
+inclk => internaso[22].CLK
+inclk => internaso[23].CLK
+inclk => internaso[24].CLK
+inclk => internaso[25].CLK
+outclk <= salidasa.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ejemplo1|cont4b:u2
+inclk => interno[0].CLK
+inclk => interno[1].CLK
+inclk => interno[2].CLK
+inclk => interno[3].CLK
+rst => interno[0].ACLR
+rst => interno[1].ACLR
+rst => interno[2].ACLR
+rst => interno[3].ACLR
+q[0] <= interno[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= interno[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= interno[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= interno[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ejemplo1|decbin7sac:u3
+e[0] => Mux0.IN19
+e[0] => Mux1.IN19
+e[0] => Mux2.IN19
+e[0] => Mux3.IN19
+e[0] => Mux4.IN19
+e[0] => Mux5.IN19
+e[0] => Mux6.IN19
+e[1] => Mux0.IN18
+e[1] => Mux1.IN18
+e[1] => Mux2.IN18
+e[1] => Mux3.IN18
+e[1] => Mux4.IN18
+e[1] => Mux5.IN18
+e[1] => Mux6.IN18
+e[2] => Mux0.IN17
+e[2] => Mux1.IN17
+e[2] => Mux2.IN17
+e[2] => Mux3.IN17
+e[2] => Mux4.IN17
+e[2] => Mux5.IN17
+e[2] => Mux6.IN17
+e[3] => Mux0.IN16
+e[3] => Mux1.IN16
+e[3] => Mux2.IN16
+e[3] => Mux3.IN16
+e[3] => Mux4.IN16
+e[3] => Mux5.IN16
+e[3] => Mux6.IN16
+sa <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+sb <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+sc <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+sd <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+se <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+sf <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+sg <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

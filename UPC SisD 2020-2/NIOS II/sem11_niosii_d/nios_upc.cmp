@@ -1,0 +1,12 @@
+	component nios_upc is
+		port (
+			clk_clk        : in    std_logic                    := 'X';             -- clk
+			leds_export    : out   std_logic_vector(7 downto 0);                    -- export
+			lcd1602_RS     : out   std_logic;                                       -- RS
+			lcd1602_RW     : out   std_logic;                                       -- RW
+			lcd1602_data   : inout std_logic_vector(7 downto 0) := (others => 'X'); -- data
+			lcd1602_E      : out   std_logic;                                       -- E
+			botones_export : in    std_logic_vector(7 downto 0) := (others => 'X')  -- export
+		);
+	end component nios_upc;
+
