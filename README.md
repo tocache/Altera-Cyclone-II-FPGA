@@ -29,6 +29,6 @@ Conversor 5V a 3.3V bidireccional de 8 canales usando IC TI TXS0108E<br><br>
 <img src="quartus 13 installation procedures 07.PNG"><br>
 <img src="quartus 13 installation procedures 08.PNG"><br>
 <hr><br>
-Tener en consideración lo siguiente:<br>
+Tener en consideración lo siguiente acerca del calentamiento en el regulador LM1117 1.2V y las resustencias de pullup internas:<br>
 <img src="https://user-images.githubusercontent.com/13710230/119237851-ace6c400-bb04-11eb-8782-e914b42f7ea6.png"><br>
 
