@@ -9,6 +9,7 @@ Wiki en español del procesador NIOS II: http://www.coffeebrain.org/wiki/index.p
 Link de descarga del Altera Quartus II 13 sp1: http://fpgasoftware.intel.com/13.0sp1/<br>
 Case para la tarjeta EP2C5T:https://github.com/tocache/3D-Printing/blob/master/My%20STL%20files/Cyclone%20EP2CT5%20board%20case/<br><br>
 <hr><br>
+Información acerca de las diferentes versiones de Quartus II y su soporte a los dispositivos, se puede apreciar que la última versión que da soporte a los Cyclone II es la 13.0 SP1:
 <img src="device support list for altera cyclone.PNG"><br>
 <b>NOTA:</b> Tener en cuenta en seleccionar la familia de dispositivos Altera Cyclone II antes de descargar el paquete de instalación<br>
 Conversor 5V a 3.3V bidireccional de 8 canales usando IC TI TXS0108E<br><br>
