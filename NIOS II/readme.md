@@ -1,4 +1,5 @@
-Tutoriales para el procesador NIOS II
+Tutoriales para el procesador NIOS II<br><br>
+<img src="Nios-ii-features.png"><br><br>
 
 Información para bootear el NIOS II desde el EPCS4 <br>
 https://www.intel.com/content/www/us/en/programmable/support/support-resources/knowledge-base/solutions/rd11122013_865.html<br>
