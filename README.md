@@ -9,7 +9,7 @@ Wiki en español del procesador NIOS II: http://www.coffeebrain.org/wiki/index.p
 Link de descarga del Altera Quartus II 13 sp1: http://fpgasoftware.intel.com/13.0sp1/<br>
 Case para la tarjeta EP2C5T:https://github.com/tocache/3D-Printing/blob/master/My%20STL%20files/Cyclone%20EP2CT5%20board%20case/<br><br>
 <hr><br>
-Tener en consideración lo siguiente acerca del calentamiento en el regulador LM1117 1.2V y las resustencias de pullup internas:<br>
+Tener en consideración lo siguiente acerca del calentamiento en el regulador LM1117 1.2V y las resistencias de pullup internas:<br>
 <img src="https://user-images.githubusercontent.com/13710230/119237851-ace6c400-bb04-11eb-8782-e914b42f7ea6.png"><br><br>
 <hr><br>
 Información acerca de las diferentes versiones de Quartus II y su soporte a los dispositivos, se puede apreciar que la última versión que da soporte a los Cyclone II es la 13.0 SP1:<br><br>
