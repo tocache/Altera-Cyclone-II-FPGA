@@ -1,7 +1,7 @@
 Tutoriales para el procesador NIOS II<br><br>
 <img src="Nios-ii-features.png"><br>
 <img src="sys2.gif"><br>
-
+<hr><br>
 Información para bootear el NIOS II desde el EPCS4 <br>
 <img src="bootloader.PNG"><br>
 - Parche del Quartus 13.0 SP1: https://www.intel.com/content/www/us/en/programmable/support/support-resources/knowledge-base/solutions/rd11122013_865.html<br>
