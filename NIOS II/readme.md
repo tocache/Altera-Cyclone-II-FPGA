@@ -10,4 +10,4 @@ Información para bootear el NIOS II desde el EPCS4 <br>
 - Referente al NIOS Flash Programmer: https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/ug/ug_nios2_flash_programmer.pdf<br>
 - A workaround to get working the flash programming of a NIOSII on a EPCSx chip: https://www.programmersought.com/article/64594215641/
 - Overview of the Nios II Flash Programmer: https://www.intel.co.jp/content/www/jp/ja/programmable/documentation/lro1429457708611.html<br>
-<li>esta página es la única que me sirvió parcialmente para grabar en la EPCS4 la configuración del NIOSII (sof) y el programa de usuario (elf)</li>
+<li>Esta página es la única que me sirvió parcialmente para grabar en la EPCS4 la configuración del NIOSII (sof) y el programa de usuario (elf)</li>
