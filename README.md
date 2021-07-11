@@ -26,10 +26,10 @@ Conversor 5V a 3.3V bidireccional de 8 canales usando IC TI TXS0108E<br><br>
 <hr><br>
 <b>Pasos para instalar el USB Blaster</b><br><br>
 - Una vez instalado el Altera Quartus II conectar el USB para proceder a la instalación manual del USB Blaster (sus drivers):<br>
-<img src="quartus 13 installation procedures 03.PNG" width=85% height=85%><br>
-<img src="quartus 13 installation procedures 04.PNG" width=85% height=85%><br>
-<img src="quartus 13 installation procedures 05.PNG" width=85% height=85%><br>
-<img src="quartus 13 installation procedures 06.PNG" width=85% height=85%><br>
-<img src="quartus 13 installation procedures 07.PNG" width=85% height=85%><br>
-<img src="quartus 13 installation procedures 08.PNG" width=85% height=85%><br>
+<img src="quartus 13 installation procedures 03.PNG" width=70% height=70%><br>
+<img src="quartus 13 installation procedures 04.PNG" width=70% height=70%><br>
+<img src="quartus 13 installation procedures 05.PNG" width=70% height=70%><br>
+<img src="quartus 13 installation procedures 06.PNG" width=70% height=70%><br>
+<img src="quartus 13 installation procedures 07.PNG" width=70% height=70%><br>
+<img src="quartus 13 installation procedures 08.PNG" width=70% height=70%><br>
 
