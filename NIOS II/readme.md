@@ -1,6 +1,6 @@
 Tutoriales para el procesador NIOS II<br><br>
 <img src="Nios-ii-features.png"><br>
-<img src="sys2.gif" width=85% height=85%><br>
+<img src="sys2.gif" width=50% height=50%><br>
 <hr><br>
 Información para bootear el NIOS II desde el EPCS4 <br>
 <img src="bootloader.PNG" width=50% height=50%><br>
