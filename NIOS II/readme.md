@@ -13,3 +13,5 @@ Información para bootear el NIOS II desde el EPCS4 <br>
 <li>Esta página es la única que me sirvió parcialmente para grabar en la EPCS4 la configuración del NIOSII (sof) y el programa de usuario (elf)</li><br>
 - Tesina - BRazo robótico didáctico usando plataforma NIOS II: https://www.dspace.espol.edu.ec/retrieve/100898/D-84739.pdf<br>
 <li>Algunos códigos para manipular servos y LCD</li><br>
+- Creating projects with Nios II for Altera De2i-150: http://www.ee.unlv.edu/~regent/NVSG/Tutorial.pdf<br>
+<li>Ejemplo para implementar DCT y Cuantización</li><br>
