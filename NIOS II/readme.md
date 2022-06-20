@@ -15,3 +15,4 @@ Información para bootear el NIOS II desde el EPCS4 <br>
 <li>Algunos códigos para manipular servos y LCD</li><br>
 - Creating projects with Nios II for Altera De2i-150: http://www.ee.unlv.edu/~regent/NVSG/Tutorial.pdf<br>
 <li>Ejemplo para implementar DCT y Cuantización</li><br>
+- Interrupt handling: https://johnloomis.org/NiosII/interrupts/interrupt/interrupt.html<br>
